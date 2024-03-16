@@ -17,7 +17,9 @@ const Menu = ({id, children} : Menu) => {
         exit={{ opacity: 0 }}
         transition={{ duration: 0.5 }}
         onClick={(e) => e.stopPropagation()}
-        className={style.main} key={id}>{children}</motion.div>
+        className={style.main} key={id}>
+            {children}
+        </motion.div>
     </AnimatePresence>)
 }
 

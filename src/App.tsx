@@ -1,16 +1,17 @@
 import { useState, useEffect } from 'react'
 
-import {Text, Header, Bottom, Main, Icon, Menu} from "./models"
+import {Header, Bottom, Main, Icon, Menu} from "./models"
 import {Times, Charging} from "./models/Header/module"
 
 import { React, Telegram, VK} from './svg'
 
 import './App.css'
 
+// @ts-expect-error
 const telegram = window.Telegram.WebApp;
 
 function App() {
-  const [count, setCount] = useState(null)
+  //const [count, setCount] = useState(null)
   const [time, settime] = useState<Date>(new Date())
   const [activemenu, setactivemenu] = useState("main1")
 

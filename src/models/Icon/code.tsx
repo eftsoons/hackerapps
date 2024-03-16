@@ -1,5 +1,4 @@
 import { ReactNode, Fragment} from 'react';
-import { AnimatePresence, motion } from "framer-motion";
 import style from './style.module.css';
 
 interface Icon {
@@ -11,7 +10,8 @@ interface Icon {
 
 const Icon = ({ id, children, active, setactive }: Icon) => {
   return (
-    <Fragment>{setactive ? 
+    <Fragment>
+        {setactive ? 
         <div onClick={() => setactive(id)} className={id == active ? style.icon2 : style.icon}>
             {children}
         </div> 
@@ -19,7 +19,8 @@ const Icon = ({ id, children, active, setactive }: Icon) => {
         <div className={style.icon}>
             {children}
         </div>}
-    </Fragment>)
+    </Fragment>
+    )
 };
 
 export default Icon;
