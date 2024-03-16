@@ -1,0 +1,6 @@
+export {default as Text } from "./Text/code"
+export {default as Header } from "./Header/code"
+export {default as Bottom } from "./Bottom/code"
+export {default as Main } from "./Main/code"
+export {default as Icon } from "./Icon/code"
+export {default as Menu } from "./Menu/code"

@@ -1,0 +1,366 @@
+<svg width="101" height="100" viewBox="0 0 101 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+	
+	<style>
+        #the-text {
+		font-size: 5px;
+		fill: white;
+		font-family: Segoe UI;
+		font-weight: 500;
+		user-select: none
+        }
+		
+		g {
+		animation: fall 1s linear infinite;
+		}
+		
+        @keyframes fall {
+		0% {
+		transform: translateY(0%);
+		}
+		100% {
+		transform: translateY(25%);
+		}
+        }
+	</style>
+	
+	<defs>
+        <mask id="maskOval">
+			<g id="test">
+			
+			<text x="0" y="0" id="the-text" fill="#000000">1</text>
+			<text x="5" y="0" id="the-text" fill="#000000">0</text>
+			<text x="10" y="0" id="the-text" fill="#000000">1</text>
+			<text x="15" y="0" id="the-text" fill="#000000">1</text>
+			<text x="20" y="0" id="the-text" fill="#000000">1</text>
+			<text x="25" y="0" id="the-text" fill="#000000">1</text>
+			<text x="30" y="0" id="the-text" fill="#000000">0</text>
+			<text x="35" y="0" id="the-text" fill="#000000">1</text>
+			<text x="40" y="0" id="the-text" fill="#000000">1</text>
+			<text x="45" y="0" id="the-text" fill="#000000">1</text>
+			<text x="50" y="0" id="the-text" fill="#000000">0</text>
+			<text x="55" y="0" id="the-text" fill="#000000">1</text>
+			<text x="60" y="0" id="the-text" fill="#000000">1</text>
+			<text x="65" y="0" id="the-text" fill="#000000">1</text>
+			<text x="70" y="0" id="the-text" fill="#000000">1</text>
+			<text x="75" y="0" id="the-text" fill="#000000">0</text>
+			<text x="80" y="0" id="the-text" fill="#000000">1</text>
+			<text x="85" y="0" id="the-text" fill="#000000">1</text>
+			<text x="90" y="0" id="the-text" fill="#000000">0</text>
+			<text x="95" y="0" id="the-text" fill="#000000">1</text>
+			<text x="100" y="0" id="the-text" fill="#000000">1</text>
+			
+			<text x="0" y="5" id="the-text" fill="#000000">1</text>
+			<text x="5" y="5" id="the-text" fill="#000000">1</text>
+			<text x="10" y="5" id="the-text" fill="#000000">1</text>
+			<text x="15" y="5" id="the-text" fill="#000000">0</text>
+			<text x="20" y="5" id="the-text" fill="#000000">1</text>
+			<text x="25" y="5" id="the-text" fill="#000000">0</text>
+			<text x="30" y="5" id="the-text" fill="#000000">1</text>
+			<text x="35" y="5" id="the-text" fill="#000000">1</text>
+			<text x="40" y="5" id="the-text" fill="#000000">0</text>
+			<text x="45" y="5" id="the-text" fill="#000000">1</text>
+			<text x="50" y="5" id="the-text" fill="#000000">0</text>
+			<text x="55" y="5" id="the-text" fill="#000000">1</text>
+			<text x="60" y="5" id="the-text" fill="#000000">0</text>
+			<text x="65" y="5" id="the-text" fill="#000000">1</text>
+			<text x="70" y="5" id="the-text" fill="#000000">1</text>
+			<text x="75" y="5" id="the-text" fill="#000000">0</text>
+			<text x="80" y="5" id="the-text" fill="#000000">0</text>
+			<text x="85" y="5" id="the-text" fill="#000000">1</text>
+			<text x="90" y="5" id="the-text" fill="#000000">0</text>
+			<text x="95" y="5" id="the-text" fill="#000000">1</text>
+			<text x="100" y="5" id="the-text" fill="#000000">0</text>
+			
+			<text x="0" y="10" id="the-text" fill="#000000">1</text>
+			<text x="5" y="10" id="the-text" fill="#000000">1</text>
+			<text x="10" y="10" id="the-text" fill="#000000">1</text>
+			<text x="15" y="10" id="the-text" fill="#000000">1</text>
+			<text x="20" y="10" id="the-text" fill="#000000">1</text>
+			<text x="25" y="10" id="the-text" fill="#000000">0</text>
+			<text x="30" y="10" id="the-text" fill="#000000">1</text>
+			<text x="35" y="10" id="the-text" fill="#000000">0</text>
+			<text x="40" y="10" id="the-text" fill="#000000">0</text>
+			<text x="45" y="10" id="the-text" fill="#000000">1</text>
+			<text x="50" y="10" id="the-text" fill="#000000">0</text>
+			<text x="55" y="10" id="the-text" fill="#000000">1</text>
+			<text x="60" y="10" id="the-text" fill="#000000">0</text>
+			<text x="65" y="10" id="the-text" fill="#000000">1</text>
+			<text x="70" y="10" id="the-text" fill="#000000">1</text>
+			<text x="75" y="10" id="the-text" fill="#000000">0</text>
+			<text x="80" y="10" id="the-text" fill="#000000">1</text>
+			<text x="85" y="10" id="the-text" fill="#000000">0</text>
+			<text x="90" y="10" id="the-text" fill="#000000">1</text>
+			<text x="95" y="10" id="the-text" fill="#000000">0</text>
+			<text x="100" y="10" id="the-text" fill="#000000">1</text>
+
+
+			<text x="0" y="15" id="the-text" fill="#000000">1</text>
+			<text x="5" y="15" id="the-text" fill="#000000">1</text>
+			<text x="10" y="15" id="the-text" fill="#000000">1</text>
+			<text x="15" y="15" id="the-text" fill="#000000">1</text>
+			<text x="20" y="15" id="the-text" fill="#000000">0</text>
+			<text x="25" y="15" id="the-text" fill="#000000">1</text>
+			<text x="30" y="15" id="the-text" fill="#000000">1</text>
+			<text x="35" y="15" id="the-text" fill="#000000">0</text>
+			<text x="40" y="15" id="the-text" fill="#000000">1</text>
+			<text x="45" y="15" id="the-text" fill="#000000">1</text>
+			<text x="50" y="15" id="the-text" fill="#000000">1</text>
+			<text x="55" y="15" id="the-text" fill="#000000">0</text>
+			<text x="60" y="15" id="the-text" fill="#000000">0</text>
+			<text x="65" y="15" id="the-text" fill="#000000">1</text>
+			<text x="70" y="15" id="the-text" fill="#000000">1</text>
+			<text x="75" y="15" id="the-text" fill="#000000">1</text>
+			<text x="80" y="15" id="the-text" fill="#000000">0</text>
+			<text x="85" y="15" id="the-text" fill="#000000">1</text>
+			<text x="90" y="15" id="the-text" fill="#000000">0</text>
+			<text x="95" y="15" id="the-text" fill="#000000">1</text>
+			<text x="100" y="15" id="the-text" fill="#000000">0</text>
+
+			<text x="0" y="20" id="the-text" fill="#000000">1</text>
+			<text x="5" y="20" id="the-text" fill="#000000">1</text>
+			<text x="10" y="20" id="the-text" fill="#000000">1</text>
+			<text x="15" y="20" id="the-text" fill="#000000">1</text>
+			<text x="20" y="20" id="the-text" fill="#000000">0</text>
+			<text x="25" y="20" id="the-text" fill="#000000">1</text>
+			<text x="30" y="20" id="the-text" fill="#000000">1</text>
+			<text x="35" y="20" id="the-text" fill="#000000">0</text>
+			<text x="40" y="20" id="the-text" fill="#000000">1</text>
+			<text x="45" y="20" id="the-text" fill="#000000">1</text>
+			<text x="50" y="20" id="the-text" fill="#000000">0</text>
+			<text x="55" y="20" id="the-text" fill="#000000">1</text>
+			<text x="60" y="20" id="the-text" fill="#000000">1</text>
+			<text x="65" y="20" id="the-text" fill="#000000">0</text>
+			<text x="70" y="20" id="the-text" fill="#000000">1</text>
+			<text x="75" y="20" id="the-text" fill="#000000">1</text>
+			<text x="80" y="20" id="the-text" fill="#000000">1</text>
+			<text x="85" y="20" id="the-text" fill="#000000">0</text>
+			<text x="90" y="20" id="the-text" fill="#000000">1</text>
+			<text x="95" y="20" id="the-text" fill="#000000">1</text>
+			<text x="100" y="20" id="the-text" fill="#000000">1</text>
+
+			<text x="0" y="25" id="the-text" fill="#000000">1</text>
+			<text x="5" y="25" id="the-text" fill="#000000">1</text>
+			<text x="10" y="25" id="the-text" fill="#000000">1</text>
+			<text x="15" y="25" id="the-text" fill="#000000">1</text>
+			<text x="20" y="25" id="the-text" fill="#000000">1</text>
+			<text x="25" y="25" id="the-text" fill="#000000">1</text>
+			<text x="30" y="25" id="the-text" fill="#000000">0</text>
+			<text x="35" y="25" id="the-text" fill="#000000">1</text>
+			<text x="40" y="25" id="the-text" fill="#000000">0</text>
+			<text x="45" y="25" id="the-text" fill="#000000">1</text>
+			<text x="50" y="25" id="the-text" fill="#000000">0</text>
+			<text x="55" y="25" id="the-text" fill="#000000">1</text>
+			<text x="60" y="25" id="the-text" fill="#000000">1</text>
+			<text x="65" y="25" id="the-text" fill="#000000">1</text>
+			<text x="70" y="25" id="the-text" fill="#000000">0</text>
+			<text x="75" y="25" id="the-text" fill="#000000">1</text>
+			<text x="80" y="25" id="the-text" fill="#000000">1</text>
+			<text x="85" y="25" id="the-text" fill="#000000">1</text>
+			<text x="90" y="25" id="the-text" fill="#000000">1</text>
+			<text x="95" y="25" id="the-text" fill="#000000">0</text>
+			<text x="100" y="25" id="the-text" fill="#000000">1</text>
+
+			<text x="0" y="30" id="the-text" fill="#000000">1</text>
+			<text x="5" y="30" id="the-text" fill="#000000">1</text>
+			<text x="10" y="30" id="the-text" fill="#000000">1</text>
+			<text x="15" y="30" id="the-text" fill="#000000">0</text>
+			<text x="20" y="30" id="the-text" fill="#000000">1</text>
+			<text x="25" y="30" id="the-text" fill="#000000">1</text>
+			<text x="30" y="30" id="the-text" fill="#000000">0</text>
+			<text x="35" y="30" id="the-text" fill="#000000">1</text>
+			<text x="40" y="30" id="the-text" fill="#000000">1</text>
+			<text x="45" y="30" id="the-text" fill="#000000">0</text>
+			<text x="50" y="30" id="the-text" fill="#000000">1</text>
+			<text x="55" y="30" id="the-text" fill="#000000">0</text>
+			<text x="60" y="30" id="the-text" fill="#000000">1</text>
+			<text x="65" y="30" id="the-text" fill="#000000">0</text>
+			<text x="70" y="30" id="the-text" fill="#000000">1</text>
+			<text x="75" y="30" id="the-text" fill="#000000">0</text>
+			<text x="80" y="30" id="the-text" fill="#000000">1</text>
+			<text x="85" y="30" id="the-text" fill="#000000">1</text>
+			<text x="90" y="30" id="the-text" fill="#000000">0</text>
+			<text x="95" y="30" id="the-text" fill="#000000">0</text>
+			<text x="100" y="30" id="the-text" fill="#000000">1</text>
+
+			<text x="0" y="35" id="the-text" fill="#000000">1</text>
+			<text x="5" y="35" id="the-text" fill="#000000">1</text>
+			<text x="10" y="35" id="the-text" fill="#000000">1</text>
+			<text x="15" y="35" id="the-text" fill="#000000">0</text>
+			<text x="20" y="35" id="the-text" fill="#000000">1</text>
+			<text x="25" y="35" id="the-text" fill="#000000">0</text>
+			<text x="30" y="35" id="the-text" fill="#000000">1</text>
+			<text x="35" y="35" id="the-text" fill="#000000">1</text>
+			<text x="40" y="35" id="the-text" fill="#000000">0</text>
+			<text x="45" y="35" id="the-text" fill="#000000">1</text>
+			<text x="50" y="35" id="the-text" fill="#000000">1</text>
+			<text x="55" y="35" id="the-text" fill="#000000">0</text>
+			<text x="60" y="35" id="the-text" fill="#000000">1</text>
+			<text x="65" y="35" id="the-text" fill="#000000">0</text>
+			<text x="70" y="35" id="the-text" fill="#000000">1</text>
+			<text x="75" y="35" id="the-text" fill="#000000">1</text>
+			<text x="80" y="35" id="the-text" fill="#000000">0</text>
+			<text x="85" y="35" id="the-text" fill="#000000">0</text>
+			<text x="90" y="35" id="the-text" fill="#000000">1</text>
+			<text x="95" y="35" id="the-text" fill="#000000">1</text>
+			<text x="100" y="35" id="the-text" fill="#000000">1</text>
+
+			<text x="0" y="40" id="the-text" fill="#000000">1</text>
+			<text x="5" y="40" id="the-text" fill="#000000">1</text>
+			<text x="10" y="40" id="the-text" fill="#000000">1</text>
+			<text x="15" y="40" id="the-text" fill="#000000">1</text>
+			<text x="20" y="40" id="the-text" fill="#000000">1</text>
+			<text x="25" y="40" id="the-text" fill="#000000">1</text>
+			<text x="30" y="40" id="the-text" fill="#000000">0</text>
+			<text x="35" y="40" id="the-text" fill="#000000">0</text>
+			<text x="40" y="40" id="the-text" fill="#000000">1</text>
+			<text x="45" y="40" id="the-text" fill="#000000">1</text>
+			<text x="50" y="40" id="the-text" fill="#000000">1</text>
+			<text x="55" y="40" id="the-text" fill="#000000">0</text>
+			<text x="60" y="40" id="the-text" fill="#000000">1</text>
+			<text x="65" y="40" id="the-text" fill="#000000">0</text>
+			<text x="70" y="40" id="the-text" fill="#000000">0</text>
+			<text x="75" y="40" id="the-text" fill="#000000">1</text>
+			<text x="80" y="40" id="the-text" fill="#000000">0</text>
+			<text x="85" y="40" id="the-text" fill="#000000">0</text>
+			<text x="90" y="40" id="the-text" fill="#000000">0</text>
+			<text x="95" y="40" id="the-text" fill="#000000">1</text>
+			<text x="100" y="40" id="the-text" fill="#000000">1</text>
+
+			<text x="0" y="45" id="the-text" fill="#000000">1</text>
+			<text x="5" y="45" id="the-text" fill="#000000">1</text>
+			<text x="10" y="45" id="the-text" fill="#000000">1</text>
+			<text x="15" y="45" id="the-text" fill="#000000">1</text>
+			<text x="20" y="45" id="the-text" fill="#000000">1</text>
+			<text x="25" y="45" id="the-text" fill="#000000">1</text>
+			<text x="30" y="45" id="the-text" fill="#000000">0</text>
+			<text x="35" y="45" id="the-text" fill="#000000">0</text>
+			<text x="40" y="45" id="the-text" fill="#000000">0</text>
+			<text x="45" y="45" id="the-text" fill="#000000">0</text>
+			<text x="50" y="45" id="the-text" fill="#000000">1</text>
+			<text x="55" y="45" id="the-text" fill="#000000">0</text>
+			<text x="60" y="45" id="the-text" fill="#000000">1</text>
+			<text x="65" y="45" id="the-text" fill="#000000">0</text>
+			<text x="70" y="45" id="the-text" fill="#000000">1</text>
+			<text x="75" y="45" id="the-text" fill="#000000">1</text>
+			<text x="80" y="45" id="the-text" fill="#000000">0</text>
+			<text x="85" y="45" id="the-text" fill="#000000">1</text>
+			<text x="90" y="45" id="the-text" fill="#000000">0</text>
+			<text x="95" y="45" id="the-text" fill="#000000">1</text>
+			<text x="100" y="45" id="the-text" fill="#000000">1</text>
+
+			<text x="0" y="50" id="the-text" fill="#000000">1</text>
+			<text x="5" y="50" id="the-text" fill="#000000">0</text>
+			<text x="10" y="50" id="the-text" fill="#000000">1</text>
+			<text x="15" y="50" id="the-text" fill="#000000">0</text>
+			<text x="20" y="50" id="the-text" fill="#000000">0</text>
+			<text x="25" y="50" id="the-text" fill="#000000">1</text>
+			<text x="30" y="50" id="the-text" fill="#000000">0</text>
+			<text x="35" y="50" id="the-text" fill="#000000">1</text>
+			<text x="40" y="50" id="the-text" fill="#000000">1</text>
+			<text x="45" y="50" id="the-text" fill="#000000">0</text>
+			<text x="50" y="50" id="the-text" fill="#000000">1</text>
+			<text x="55" y="50" id="the-text" fill="#000000">0</text>
+			<text x="60" y="50" id="the-text" fill="#000000">1</text>
+			<text x="65" y="50" id="the-text" fill="#000000">0</text>
+			<text x="70" y="50" id="the-text" fill="#000000">1</text>
+			<text x="75" y="50" id="the-text" fill="#000000">0</text>
+			<text x="80" y="50" id="the-text" fill="#000000">1</text>
+			<text x="85" y="50" id="the-text" fill="#000000">0</text>
+			<text x="90" y="50" id="the-text" fill="#000000">1</text>
+			<text x="95" y="50" id="the-text" fill="#000000">1</text>
+			<text x="100" y="50" id="the-text" fill="#000000">1</text>
+
+			<text x="0" y="55" id="the-text" fill="#000000">1</text>
+			<text x="5" y="55" id="the-text" fill="#000000">1</text>
+			<text x="10" y="55" id="the-text" fill="#000000">1</text>
+			<text x="15" y="55" id="the-text" fill="#000000">1</text>
+			<text x="20" y="55" id="the-text" fill="#000000">1</text>
+			<text x="25" y="55" id="the-text" fill="#000000">1</text>
+			<text x="30" y="55" id="the-text" fill="#000000">1</text>
+			<text x="35" y="55" id="the-text" fill="#000000">0</text>
+			<text x="40" y="55" id="the-text" fill="#000000">1</text>
+			<text x="45" y="55" id="the-text" fill="#000000">0</text>
+			<text x="50" y="55" id="the-text" fill="#000000">1</text>
+			<text x="55" y="55" id="the-text" fill="#000000">0</text>
+			<text x="60" y="55" id="the-text" fill="#000000">1</text>
+			<text x="65" y="55" id="the-text" fill="#000000">0</text>
+			<text x="70" y="55" id="the-text" fill="#000000">0</text>
+			<text x="75" y="55" id="the-text" fill="#000000">1</text>
+			<text x="80" y="55" id="the-text" fill="#000000">0</text>
+			<text x="85" y="55" id="the-text" fill="#000000">1</text>
+			<text x="90" y="55" id="the-text" fill="#000000">1</text>
+			<text x="95" y="55" id="the-text" fill="#000000">0</text>
+			<text x="100" y="55" id="the-text" fill="#000000">1</text>
+
+			<text x="0" y="60" id="the-text" fill="#000000">1</text>
+			<text x="5" y="60" id="the-text" fill="#000000">1</text>
+			<text x="10" y="60" id="the-text" fill="#000000">0</text>
+			<text x="15" y="60" id="the-text" fill="#000000">1</text>
+			<text x="20" y="60" id="the-text" fill="#000000">1</text>
+			<text x="25" y="60" id="the-text" fill="#000000">0</text>
+			<text x="30" y="60" id="the-text" fill="#000000">0</text>
+			<text x="35" y="60" id="the-text" fill="#000000">1</text>
+			<text x="40" y="60" id="the-text" fill="#000000">1</text>
+			<text x="45" y="60" id="the-text" fill="#000000">0</text>
+			<text x="50" y="60" id="the-text" fill="#000000">1</text>
+			<text x="55" y="60" id="the-text" fill="#000000">1</text>
+			<text x="60" y="60" id="the-text" fill="#000000">0</text>
+			<text x="65" y="60" id="the-text" fill="#000000">0</text>
+			<text x="70" y="60" id="the-text" fill="#000000">0</text>
+			<text x="75" y="60" id="the-text" fill="#000000">1</text>
+			<text x="80" y="60" id="the-text" fill="#000000">1</text>
+			<text x="85" y="60" id="the-text" fill="#000000">0</text>
+			<text x="90" y="60" id="the-text" fill="#000000">0</text>
+			<text x="95" y="60" id="the-text" fill="#000000">1</text>
+			<text x="100" y="60" id="the-text" fill="#000000">1</text>
+			
+			<text x="0" y="65" id="the-text" fill="#000000">1</text>
+			<text x="5" y="65" id="the-text" fill="#000000">1</text>
+			<text x="10" y="65" id="the-text" fill="#000000">1</text>
+			<text x="15" y="65" id="the-text" fill="#000000">1</text>
+			<text x="20" y="65" id="the-text" fill="#000000">0</text>
+			<text x="25" y="65" id="the-text" fill="#000000">1</text>
+			<text x="30" y="65" id="the-text" fill="#000000">0</text>
+			<text x="35" y="65" id="the-text" fill="#000000">0</text>
+			<text x="40" y="65" id="the-text" fill="#000000">1</text>
+			<text x="45" y="65" id="the-text" fill="#000000">1</text>
+			<text x="50" y="65" id="the-text" fill="#000000">0</text>
+			<text x="55" y="65" id="the-text" fill="#000000">1</text>
+			<text x="60" y="65" id="the-text" fill="#000000">1</text>
+			<text x="65" y="65" id="the-text" fill="#000000">1</text>
+			<text x="70" y="65" id="the-text" fill="#000000">0</text>
+			<text x="75" y="65" id="the-text" fill="#000000">1</text>
+			<text x="80" y="65" id="the-text" fill="#000000">1</text>
+			<text x="85" y="65" id="the-text" fill="#000000">0</text>
+			<text x="90" y="65" id="the-text" fill="#000000">1</text>
+			<text x="95" y="65" id="the-text" fill="#000000">1</text>
+			<text x="100" y="65" id="the-text" fill="#000000">1</text>
+
+			<text x="0" y="70" id="the-text" fill="#000000">1</text>
+			<text x="5" y="70" id="the-text" fill="#000000">1</text>
+			<text x="10" y="70" id="the-text" fill="#000000">1</text>
+			<text x="15" y="70" id="the-text" fill="#000000">1</text>
+			<text x="20" y="70" id="the-text" fill="#000000">0</text>
+			<text x="25" y="70" id="the-text" fill="#000000">0</text>
+			<text x="30" y="70" id="the-text" fill="#000000">1</text>
+			<text x="35" y="70" id="the-text" fill="#000000">0</text>
+			<text x="40" y="70" id="the-text" fill="#000000">1</text>
+			<text x="45" y="70" id="the-text" fill="#000000">0</text>
+			<text x="50" y="70" id="the-text" fill="#000000">1</text>
+			<text x="55" y="70" id="the-text" fill="#000000">0</text>
+			<text x="60" y="70" id="the-text" fill="#000000">1</text>
+			<text x="65" y="70" id="the-text" fill="#000000">1</text>
+			<text x="70" y="70" id="the-text" fill="#000000">0</text>
+			<text x="75" y="70" id="the-text" fill="#000000">1</text>
+			<text x="80" y="70" id="the-text" fill="#000000">0</text>
+			<text x="85" y="70" id="the-text" fill="#000000">0</text>
+			<text x="90" y="70" id="the-text" fill="#000000">0</text>
+			<text x="95" y="70" id="the-text" fill="#000000">0</text>
+			<text x="100" y="70" id="the-text" fill="#000000">1</text>
+
+			</g>
+		</mask>
+	</defs>
+	
+	<path mask="url(#maskOval)" fill="#5bab50" d="M53.7085 72.042C30.9168 72.042 17.9169 56.417 17.3752 30.417H28.7919C29.1669 49.5003 37.5834 57.5836 44.25 59.2503V30.417H55.0004V46.8752C61.5837 46.1669 68.4995 38.667 70.8329 30.417H81.5832C79.7915 40.5837 72.2915 48.0836 66.9582 51.1669C72.2915 53.6669 80.8336 60.2086 84.0836 72.042H72.2499C69.7082 64.1253 63.3754 58.0003 55.0004 57.1669V72.042H53.7085Z"/>
+</svg>
