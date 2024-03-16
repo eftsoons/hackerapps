@@ -10,8 +10,8 @@
 }
 
 .separator {
-    height: 30px;
+    height: 6vh;
     border-radius: 5px;
-    width: 3px;
-    background-color: rgba(117, 117, 117, 0.1)
+    width: 0.75vw;
+    background-color: rgba(117, 117, 117, 0.5)
 }

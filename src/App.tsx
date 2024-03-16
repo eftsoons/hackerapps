@@ -36,13 +36,10 @@ function App() {
 
       <Main activemenu={activemenu}>
           <Menu id="main1">
-            Характеристики
-              <img style={{ width: "150px", height: "150px"}} src={Telegram} alt=""></img>
+            <img style={{ width: "150px", height: "150px"}} src={Telegram} alt="Характеристика" />
           </Menu>
           <Menu id="main2">
-            Методы взлома и взлом
-            
-          <img style={{ width: "150px", height: "150px"}} src={VK} alt=""></img>
+          <img style={{ width: "150px", height: "150px"}} src={VK} alt="Методы взлома и взлом" />
           </Menu>
           <Menu id="main3">
           Топ игроков
