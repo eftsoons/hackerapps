@@ -1,4 +1,5 @@
-.asdasdp {
-    text-align: center;
-    color: red
+.text {
+    font-size: 15px;
+    user-select: none;
+    color:#5bab50;
 }

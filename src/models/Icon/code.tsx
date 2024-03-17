@@ -4,7 +4,7 @@ import style from './style.module.css';
 interface Icon {
     id?: string;
     children: ReactNode;
-    active?: string
+    active?: string;
     setactive?: Function
 }
 

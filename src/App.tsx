@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-import {Header, Bottom, Main, Icon, Menu} from "./models"
+import {Header, Bottom, Main, Icon, Menu, Text} from "./models"
 import {Times, Charging} from "./models/Header/module"
 
 import { React, Telegram, VK} from './svg'
@@ -19,7 +19,7 @@ function App() {
     telegram.ready();
     telegram.expand();
 
-    var interval = setInterval(() => {
+    let interval = setInterval(() => {
       settime(new Date());
     }, 500);
 
@@ -30,13 +30,14 @@ function App() {
     <>
       <Header>
         <Times>{time}</Times>
+        <Text>Меню1</Text>
         <Charging />
       </Header>
 
 
       <Main activemenu={activemenu}>
           <Menu id="main1">
-            <img style={{ width: "150px", height: "150px"}} src={Telegram} alt="Характеристика" />
+            <img style={{ width: "150px", height: "150px", userSelect: "none"}} src={Telegram} alt="Характеристика" />
           </Menu>
           <Menu id="main2">
           <img style={{ width: "150px", height: "150px"}} src={VK} alt="Методы взлома и взлом" />
@@ -48,7 +49,16 @@ function App() {
           Что-то типа магазина (p2p)
           </Menu>
           <Menu id="main5">
-            Статистика игры + ссылки на паблики
+            <div style={{display: "flex"}}>
+              <div style={{marginLeft: "10px", padding: "10px", height: "100px", width: "150px", backgroundColor: "red", borderRadius: "30px"}}>Статистика игры</div>
+            
+              <div style={{marginLeft: "50px", padding: "10px", height: "100px", width: "150px", backgroundColor: "red", borderRadius: "30px"}}>Стата 2</div>
+            </div>
+            <br />
+            <br />
+            <br />
+            <br />
+            <div style={{padding: "10px", height: "100px", width: "95vw", backgroundColor: "red", borderRadius: "30px"}}>Тут типа кнопки-ссылки</div>
           </Menu>
       </Main>
 

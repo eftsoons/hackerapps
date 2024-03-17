@@ -1,12 +1,12 @@
 
+import style from "./style.module.css"
+
 type Text = {
-  test: string;
   children: string;
 }
 
-
 const Text = ({ children } : Text) => {
-  return children
+  return <span className={style.text}>{children}</span>
 };
 
 

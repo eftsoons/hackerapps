@@ -1,12 +1,8 @@
-import { ReactNode } from "react"
+import { PropsWithChildren } from "react"
 
 import style from "./style.module.css"
 
-type Header2 = {
-    children: ReactNode
-}
-
-const Header = ({children} : Header2) => {
+const Header = ({children} : PropsWithChildren) => {
     return <div className={style.header}>{children}</div>
 }
 
