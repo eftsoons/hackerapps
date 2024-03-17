@@ -7,7 +7,7 @@ import {Times, Charging} from "./models/Header/module"
 import {StatsTG, StatsVK, Stats} from "./models/StatsGame/module"
 
 
-import { React, Telegram, VK, Chart, Money, Cup, Computer, Mobile} from './svg'
+import {Telegram, VK, Chart, Money, Cup, Computer, Mobile} from './svg'
 
 import './App.css'
 

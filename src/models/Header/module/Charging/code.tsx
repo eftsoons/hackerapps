@@ -1,4 +1,4 @@
-import { Battery, Bolt, Signal, Telegram, Wifi} from '../../../../svg'
+import { Battery, Signal, Wifi} from '../../../../svg'
 
 import style from "../style.module.css"
 
