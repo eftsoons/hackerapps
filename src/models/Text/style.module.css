@@ -2,4 +2,6 @@
     font-size: 15px;
     user-select: none;
     color:#5bab50;
+    display: flex;
+    align-items: center;
 }

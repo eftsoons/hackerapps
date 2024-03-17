@@ -7,8 +7,15 @@
     justify-content: center;
     user-select: none;
     margin-top: 2vh;
+    font-size: 20px;
+    color: var(--tg-theme-text-color);
+    cursor: pointer;
     transition: 0.5s;
     background-color: var(--tg-theme-button-color);
+}
+
+a {
+    text-decoration: none;
 }
 
 .button:hover {

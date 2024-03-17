@@ -1,12 +1,8 @@
-// import { ReactNode } from "react"
+import {Node} from "../../../../Props"
 
 import style from "../style.module.css"
 
-interface StatsTG {
-    children: string
-}
-
-const StatsTG = ({children} : StatsTG) => {
+const StatsTG = ({children} : Node) => {
     return <div className={style.stats}>{children}</div>
 }
 
