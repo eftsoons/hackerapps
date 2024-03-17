@@ -62,36 +62,36 @@ function App() {
               {/* <img style={{position: "absolute", top: "7%", left: "0" , width: "50px", height: "50px", userSelect: "none"}} src={Telegram} alt="" /> */}
                 TG
                 <br />
-                Всего игроков: 2.000.000
+                Всего игроков: 2M
                 <br />
-                Всего монет: 2.000.000
+                Всего монет: 2M
                 <br />
-                Игроков за день: 2.000.000
+                Игроков за день: 2M
                 <br />
-                Всего взломанных: 2.000.000
+                Всего взломанных: 2M
               </StatsTG>
               <StatsVK>
                 {/* <img style={{position: "absolute", top: "7%", right: "38%" , width: "50px", height: "50px", userSelect: "none"}} src={VK} alt="" /> */}
                 VK
                 <br />
-                Всего игроков: 2.000.000
+                Всего игроков: 2M
                 <br />
-                Всего монет: 2.000.000
+                Всего монет: 2M
                 <br />
-                Игроков за день: 2.000.000
+                Игроков за день: 2M
                 <br />
-                Всего взломанных: 2.000.000
+                Всего взломанных: 2M
               </StatsVK>
             </StatsGame>
             <Stats>
                 <img style={{ width: "100px", height: "100px", userSelect: "none"}} src={Telegram} alt="Характеристика" />
-                Всего игроков: 4.000.000
+                Всего игроков: 4M
                 <br />
-                Всего монет: 4.000.000
+                Всего монет: 4M
                 <br />
-                Игроков за день: 4.000.000
+                Игроков за день: 4M
                 <br />
-                Всего взломанных: 4.000.000
+                Всего взломанных: 4M
                 <img style={{ width: "100px", height: "100px"}} src={VK} alt="" />
             </Stats>
             <ButtonGroup>
