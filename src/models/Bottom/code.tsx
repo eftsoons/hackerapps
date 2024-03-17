@@ -14,7 +14,7 @@ const Bottom = ({ children, activemenu, setactive }: Bottom) => {
         {Children.toArray(children).map((child, index) => (
             <Fragment key={index}>
             {index != 0 && <div className={style.separator} />}
-            <div className={style.icon}>{cloneElement(child as ReactElement, {active: activemenu, setactive: setactive})}</div>
+            {cloneElement(child as ReactElement, {active: activemenu, setactive: setactive})}
             </Fragment>
         ))}
         </div>
