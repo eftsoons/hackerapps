@@ -56,7 +56,7 @@ function App() {
           <Menu id="main4">
           Что-то типа магазина (p2p)
           </Menu>
-          <Menu id="main5">
+          <Menu id="stats">
             <StatsGame>
               <StatsTG>
               {/* <img style={{position: "absolute", top: "7%", left: "0" , width: "50px", height: "50px", userSelect: "none"}} src={Telegram} alt="" /> */}
@@ -115,7 +115,7 @@ function App() {
       <Icon id="main4">
         <Money />
       </Icon>
-      <Icon id="main5">
+      <Icon id="stats">
         <Chart />
       </Icon>
       </Bottom>
