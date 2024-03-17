@@ -2,7 +2,7 @@
 
 import style from "../style.module.css"
 
-interface  StatsTG {
+interface StatsTG {
     children: string
 }
 
