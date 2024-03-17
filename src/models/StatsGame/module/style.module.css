@@ -1,0 +1,10 @@
+.stats {
+    height: 20vh;
+    width: 96%;
+    border-radius: 30px;
+    margin: 5px;
+    background-color: rgba(117, 117, 117, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

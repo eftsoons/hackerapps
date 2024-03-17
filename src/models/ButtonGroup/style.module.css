@@ -1,0 +1,13 @@
+.buttongroup {
+    height: 35vh;
+    width: 96%;
+    border-radius: 30px;
+    margin: 10px;
+    background-color: rgba(117, 117, 117, 0.25);
+    display: flex;
+    justify-content: center;
+}
+
+.buttongroup2 {
+    width: 95%;
+}

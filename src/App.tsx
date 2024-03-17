@@ -1,7 +1,11 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
-import {Header, Bottom, Main, Icon, Menu, Text} from "./models"
+import Chart from 'chart.js/auto';
+
+import {Header, Bottom, Main, Icon, Menu, Text, StatsGame, ButtonGroup, Button} from "./models"
 import {Times, Charging} from "./models/Header/module"
+import {StatsTG, StatsVK, Stats} from "./models/StatsGame/module"
+
 
 import { React, Telegram, VK} from './svg'
 
@@ -14,7 +18,7 @@ function App() {
   //const [count, setCount] = useState(null)
   const [time, settime] = useState<Date>(new Date())
   const [activemenu, setactivemenu] = useState("main1")
-
+  
   useEffect(() => {
     telegram.ready();
     telegram.expand();
@@ -22,6 +26,8 @@ function App() {
     let interval = setInterval(() => {
       settime(new Date());
     }, 500);
+
+   
 
     return () => clearInterval(interval);
   }, [])
@@ -38,9 +44,11 @@ function App() {
       <Main activemenu={activemenu}>
           <Menu id="main1">
             <img style={{ width: "150px", height: "150px", userSelect: "none"}} src={Telegram} alt="Характеристика" />
+            Характеристики
           </Menu>
           <Menu id="main2">
           <img style={{ width: "150px", height: "150px"}} src={VK} alt="Методы взлома и взлом" />
+          методы взлома и взлом
           </Menu>
           <Menu id="main3">
           Топ игроков
@@ -49,16 +57,16 @@ function App() {
           Что-то типа магазина (p2p)
           </Menu>
           <Menu id="main5">
-            <div style={{display: "flex"}}>
-              <div style={{marginLeft: "10px", padding: "10px", height: "100px", width: "150px", backgroundColor: "red", borderRadius: "30px"}}>Статистика игры</div>
-            
-              <div style={{marginLeft: "50px", padding: "10px", height: "100px", width: "150px", backgroundColor: "red", borderRadius: "30px"}}>Стата 2</div>
-            </div>
-            <br />
-            <br />
-            <br />
-            <br />
-            <div style={{padding: "10px", height: "100px", width: "95vw", backgroundColor: "red", borderRadius: "30px"}}>Тут типа кнопки-ссылки</div>
+            <StatsGame>
+              <StatsTG>Стата ТГ</StatsTG>
+              <StatsVK>Стата ВК</StatsVK>
+            </StatsGame>
+            <Stats>Стата всей игры</Stats>
+            <ButtonGroup>
+              <Button onClick={() => console.log(123)}>asd</Button>
+              <Button>asd</Button>
+              <Button>asd</Button>
+            </ButtonGroup>
           </Menu>
       </Main>
 
