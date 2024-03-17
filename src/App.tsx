@@ -55,6 +55,12 @@ function App() {
           </Menu>
           <Menu id="main4">
           Что-то типа магазина (p2p)
+          <ButtonGroup>
+              <Button href="https://t.me/HackerCoinChannel" onClick={() => console.log(123)}>Telegram канал</Button>
+              <Button href="https://vk.com/hackercoinplay">VK группа</Button>
+              <Button href="https://t.me/shishkin666">Автор</Button>
+              <Button href="https://t.me/shishkin666">Автор</Button>
+            </ButtonGroup>
           </Menu>
           <Menu id="stats">
             <StatsGame>
