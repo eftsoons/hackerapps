@@ -1,6 +1,6 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
 
-import Chart from 'chart.js/auto';
+// import Chart from 'chart.js/auto';
 
 import {Header, Bottom, Main, Icon, Menu, Text, StatsGame, ButtonGroup, Button} from "./models"
 import {Times, Charging} from "./models/Header/module"
