@@ -12,6 +12,6 @@
 .separator {
     height: 6vh;
     border-radius: 5px;
-    width: 0.75vw;
+    width: 500px;
     background-color: rgba(117, 117, 117, 0.5)
 }

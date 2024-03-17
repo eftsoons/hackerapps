@@ -30,7 +30,7 @@ function App() {
     <>
       <Header>
         <Times>{time}</Times>
-        <Text>Меню1</Text>
+        <Text>{activemenu}</Text>
         <Charging />
       </Header>
 
