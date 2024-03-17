@@ -17,6 +17,7 @@
 }
 
 
-.button:active {
-    background-color: dark;
+.button:active, .buttonandroid:active {
+    transition: none;
+    background-color: var(--tg-theme-secondary-bg-color)
 }
