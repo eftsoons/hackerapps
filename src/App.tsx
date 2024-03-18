@@ -53,14 +53,9 @@ function App() {
           <Menu id="main3">
           Топ игроков
           </Menu>
-          <Menu id="main4">
-          Что-то типа магазина (p2p)
-          <ButtonGroup>
-              <Button href="https://t.me/HackerCoinChannel" onClick={() => console.log(123)}>Telegram канал</Button>
-              <Button href="https://vk.com/hackercoinplay">VK группа</Button>
-              <Button href="https://t.me/shishkin666">Автор</Button>
-              <Button href="https://t.me/shishkin666">Автор</Button>
-            </ButtonGroup>
+          <Menu style={{display: "flex", alignItems: "center", justifyContent: "center"}} id="main4">
+            {/* what?listeng? */}
+            <div className="listeng"><Money height='20vh' width='20vw' /></div>
           </Menu>
           <Menu id="stats">
             <StatsGame>

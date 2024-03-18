@@ -17,6 +17,7 @@
 
 a {
     text-decoration: none;
+    user-select: none;
 }
 
 .button:hover {
