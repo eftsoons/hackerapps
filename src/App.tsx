@@ -6,6 +6,7 @@ import {Header, Bottom, Main, Icon, Menu, Text, StatsGame, ButtonGroup, Button} 
 import {Times, Charging} from "./models/Header/module"
 import {StatsTG, StatsVK, Stats} from "./models/StatsGame/module"
 
+import logo from "./img/4000x4000.png"
 
 import {Telegram, VK, Chart, Money, Cup, Computer, Mobile} from './svg'
 
@@ -17,7 +18,8 @@ const telegram = window.Telegram.WebApp;
 function App() {
   //const [count, setCount] = useState(null)
   const [time, settime] = useState<Date>(new Date())
-  const [activemenu, setactivemenu] = useState("main1")
+  const [click, setclick] = useState(0)
+  const [activemenu, setactivemenu] = useState("Профиль")
   
   useEffect(() => {
     telegram.ready();
@@ -26,8 +28,6 @@ function App() {
     let interval = setInterval(() => {
       settime(new Date());
     }, 500);
-
-   
 
     return () => clearInterval(interval);
   }, [])
@@ -42,22 +42,29 @@ function App() {
 
 
       <Main activemenu={activemenu}>
-          <Menu id="main1">
+          <Menu id="Профиль">
             <img style={{ width: "150px", height: "150px", userSelect: "none"}} src={Telegram} alt="Характеристика" />
             Характеристики
           </Menu>
-          <Menu id="main2">
+          <Menu id="Взлом">
           <img style={{ width: "150px", height: "150px"}} src={VK} alt="Методы взлома и взлом" />
           методы взлома и взлом
           </Menu>
-          <Menu id="main3">
+          <Menu id="Топ">
           Топ игроков
           </Menu>
-          <Menu style={{display: "flex", alignItems: "center", justifyContent: "center"}} id="main4">
+          <Menu style={{display: "flex", alignItems: "center", justifyContent: "center"}} id="?">
             {/* what?listeng? */}
-            <div className="listeng"><Money height='20vh' width='20vw' /></div>
+            <div className="listeng" onClick={() => {
+              if (click < 40) {
+                setclick(click + 1); 
+              } else {
+                setclick(0);
+                setactivemenu("???")
+              }
+          }}><Money height='20vh' width='20vw' /></div>
           </Menu>
-          <Menu id="stats">
+          <Menu id="Статистика">
             <StatsGame>
               <StatsTG>
               {/* <img style={{position: "absolute", top: "7%", left: "0" , width: "50px", height: "50px", userSelect: "none"}} src={Telegram} alt="" /> */}
@@ -101,22 +108,25 @@ function App() {
               <Button href="https://t.me/shishkin666">Автор</Button>
             </ButtonGroup>
           </Menu>
+          <Menu style={{display: "flex", alignItems: "center", justifyContent: "center"}} id="???">
+            <img width={250} src={logo} />
+          </Menu>
       </Main>
 
       <Bottom activemenu={activemenu} setactive={setactivemenu}>
-      <Icon id="main1">
+      <Icon id="Профиль">
         <Mobile />
       </Icon>
-      <Icon id="main2">
+      <Icon id="Взлом">
         <Computer />
       </Icon>
-      <Icon id="main3">
+      <Icon id="Топ">
         <Cup />
       </Icon>
-      <Icon id="main4">
+      <Icon id="?">
         <Money />
       </Icon>
-      <Icon id="stats">
+      <Icon id="Статистика">
         <Chart />
       </Icon>
       </Bottom>

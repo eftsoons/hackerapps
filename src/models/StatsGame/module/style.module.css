@@ -8,6 +8,8 @@
     align-items: center;
     justify-content: center;
     font-size: 13px;
+    /* overflow: hidden; типа работает, но не работает
+    text-overflow: ellipsis */
 }
 
 .stats2 {

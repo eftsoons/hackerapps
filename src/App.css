@@ -18,6 +18,13 @@ body {
     fill: rgb(91,171,80);
     background-color: none;
     animation: glow 0.75s  ease-in-out infinite alternate;
+    transition: 0.1s;
+    transform: scale(1);
+}
+
+.listeng:active {
+    transition: 0.1s;
+    transform: scale(0.95);
 }
 
 @keyframes glow {
