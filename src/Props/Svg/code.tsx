@@ -1,4 +1,4 @@
-export interface SVG {
+export interface SVGType {
     height?: string
     width?: string
 }
