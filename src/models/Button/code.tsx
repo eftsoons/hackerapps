@@ -11,13 +11,13 @@ const telegram = window.Telegram.WebApp;
 
 const Button = ({children, onClick, href} : Button) => {
     return (!href ? 
-    <div onClick={onClick} className={telegram.platform === "android" ? style.buttonandroid : style.button}>
+    <button onClick={onClick} className={telegram.platform === "android" ? style.buttonandroid : style.button}>
         {children}
-    </div> : 
+    </button> : 
     <a href={href} target="blank">
-    <div onClick={onClick} className={telegram.platform === "android" ? style.buttonandroid : style.button}>
+    <button onClick={onClick} className={telegram.platform === "android" ? style.buttonandroid : style.button}>
         {children}
-    </div>
+    </button>
     </a>
     )
 }

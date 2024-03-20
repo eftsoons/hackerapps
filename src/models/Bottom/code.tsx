@@ -5,7 +5,7 @@ import style from './style.module.css';
 interface Bottom {
   children: ReactNode;
   activemenu: string;
-  setactive: Function
+  setactive: Function;
 }
 
 const Bottom = ({ children, activemenu, setactive }: Bottom) => {

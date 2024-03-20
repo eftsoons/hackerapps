@@ -5,6 +5,7 @@
     font-weight: 500;
     letter-spacing: 0.5px;
     font-size: 30px;
+    user-select: none;
 }
 
 body {

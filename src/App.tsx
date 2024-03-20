@@ -19,11 +19,13 @@ function App() {
   //const [count, setCount] = useState(null)
   const [time, settime] = useState<Date>(new Date())
   const [click, setclick] = useState(0)
-  const [activemenu, setactivemenu] = useState("Профиль")
+  const [activemenu, setactivemenu] = useState("profile")
   
   useEffect(() => {
     telegram.ready();
     telegram.expand();
+
+    telegram.BackButton.onClick(() => {telegram.BackButton.hide(); setactivemenu("profile")})
 
     let interval = setInterval(() => {
       settime(new Date());
@@ -36,35 +38,39 @@ function App() {
     <>
       <Header>
         <Times>{time}</Times>
-        <Text>{activemenu}</Text>
         <Charging />
       </Header>
 
 
       <Main activemenu={activemenu}>
-          <Menu id="Профиль">
+          <Menu id="profile">
             <img style={{ width: "150px", height: "150px", userSelect: "none"}} src={Telegram} alt="Характеристика" />
             Характеристики
+            <Text>{activemenu}</Text>
+            <Button onClick={() => telegram.BackButton.show()}>Текст кнопки выхода</Button>
+            <Button onClick={() => console.log(123)}>Текст механики взлома</Button>
           </Menu>
-          <Menu id="Взлом">
+          <Menu id="hack">
           <img style={{ width: "150px", height: "150px"}} src={VK} alt="Методы взлома и взлом" />
           методы взлома и взлом
+          <Button href="https://t.me/share/url?url=t.me/botname/app?startapp=something&text=something">asd</Button>
           </Menu>
-          <Menu id="Топ">
+          <Menu id="top">
           Топ игроков
           </Menu>
-          <Menu style={{display: "flex", alignItems: "center", justifyContent: "center"}} id="?">
+          <Menu style={{display: "flex", alignItems: "center", justifyContent: "center"}} id="secret">
             {/* what?listeng? */}
             <div className="listeng" onClick={() => {
               if (click < 40) {
                 setclick(click + 1); 
               } else {
                 setclick(0);
-                setactivemenu("???")
+                setactivemenu("secretsuper")
+                telegram.BackButton.show();
               }
           }}><Money height='20vh' width='20vw' /></div>
           </Menu>
-          <Menu id="Статистика">
+          <Menu id="stats">
             <StatsGame>
               <StatsTG>
               {/* <img style={{position: "absolute", top: "7%", left: "0" , width: "50px", height: "50px", userSelect: "none"}} src={Telegram} alt="" /> */}
@@ -103,30 +109,30 @@ function App() {
                 <img style={{ width: "100px", height: "100px"}} src={VK} alt="" />
             </Stats>
             <ButtonGroup>
-              <Button href="https://t.me/HackerCoinChannel" onClick={() => console.log(123)}>Telegram канал</Button>
+              <Button href="https://t.me/HackerCoinChannel">Telegram канал</Button>
               <Button href="https://vk.com/hackercoinplay">VK группа</Button>
               <Button href="https://t.me/shishkin666">Автор</Button>
             </ButtonGroup>
           </Menu>
-          <Menu style={{display: "flex", alignItems: "center", justifyContent: "center"}} id="???">
+          <Menu style={{display: "flex", alignItems: "center", justifyContent: "center"}} id="secretsuper">
             <img width={250} src={logo} />
           </Menu>
       </Main>
 
       <Bottom activemenu={activemenu} setactive={setactivemenu}>
-      <Icon id="Профиль">
+      <Icon id="profile">
         <Mobile />
       </Icon>
-      <Icon id="Взлом">
+      <Icon id="hack">
         <Computer />
       </Icon>
-      <Icon id="Топ">
+      <Icon id="top">
         <Cup />
       </Icon>
-      <Icon id="?">
+      <Icon id="secret">
         <Money />
       </Icon>
-      <Icon id="Статистика">
+      <Icon id="stats">
         <Chart />
       </Icon>
       </Bottom>
