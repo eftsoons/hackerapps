@@ -19,7 +19,7 @@
 a {
     text-decoration: none;
     user-select: none;
-    touch-action: manipulation;
+    background-color: none;
 }
 
 .button:hover {

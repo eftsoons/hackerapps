@@ -48,7 +48,7 @@ function App() {
             Характеристики
             <Text>{activemenu}</Text>
             <Button onClick={() => telegram.BackButton.show()}>Текст кнопки выхода</Button>
-            <Button onClick={() => console.log(123)}>Текст механики взлома</Button>
+            <Button onClick={() => telegram.openLink("https://t.me/share/url?url=asdasd&text=Ты был взломан")}>Текст механики взлома</Button>
           </Menu>
           <Menu id="hack">
           <img style={{ width: "150px", height: "150px"}} src={VK} alt="Методы взлома и взлом" />
