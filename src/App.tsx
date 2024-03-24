@@ -27,7 +27,8 @@ function App() {
     telegram.expand();
 
     telegram.BackButton.onClick(() => {telegram.BackButton.hide(); setactivemenu("profile")})
-    telegram.headerColor = "#181818"
+    telegram.setHeaderColor("#181818")
+    telegram.setBackgroundColor("#181818")
 
     let interval = setInterval(() => {
       settime(new Date());
@@ -43,14 +44,23 @@ function App() {
         <Charging />
       </Header>
 
-
-      <Main activemenu={activemenu}>
-          <Menu id="profile">
-            <img style={{ width: "150px", height: "150px", userSelect: "none"}} src={Telegram} alt="Характеристика" />
+      {/* <img style={{ width: "150px", height: "150px", userSelect: "none"}} src={Telegram} alt="Характеристика" />
             Характеристики
             <Text>{activemenu}</Text>
             <Button onClick={() => telegram.BackButton.show()}>Текст кнопки выхода</Button>
-            <Button onClick={() => telegram.openTelegramLink("https://t.me/wallet?startattach=send-assetCurrency__&choose=users")}>Текст механики взлома</Button>
+            <Button onClick={() => 
+            {
+              // telegram.openTelegramLink("https://t.me/wallet/url?url=sedf");
+              telegram.showPopup({title: "Окно потверждения взлома", message: "На этом этапе взлома вам необходимо будет отправить вредоносную ссылку пользователю"})
+            }
+              }>
+              Текст механики взлома
+            </Button> */}
+
+
+      <Main activemenu={activemenu}>
+          <Menu id="profile">
+            <Window>asd</Window>
           </Menu>
           <Menu id="hack">
           {/* <img style={{ width: "150px", height: "150px"}} src={VK} alt="Методы взлома и взлом" />
@@ -63,11 +73,19 @@ function App() {
                 setactivemenu("playassembler"); 
                 telegram.BackButton.show();
                 }} 
-                icon={assembler}>
+                icon={assembler}
+                righttext="1 ссылка взлом"
+                >
                 Асемблер
               </Cell>
-              <Cell onClick={() => {telegram.BackButton.onClick(() => {telegram.BackButton.hide(); setactivemenu("hack")}); setactivemenu("playnaeb"); telegram.BackButton.show();}}>Социальная инжерия</Cell>
-              <Cell onClick={() => {telegram.BackButton.onClick(() => {telegram.BackButton.hide(); setactivemenu("hack")}); setactivemenu("playparsing"); telegram.BackButton.show();}} icon={Telegram}>Парсинг</Cell>
+              <Cell 
+              onClick={() => {telegram.BackButton.onClick(() => {telegram.BackButton.hide(); setactivemenu("hack")}); setactivemenu("playnaeb"); telegram.BackButton.show();}}
+              righttext="5 ссылок взлом"
+              >Социальная инжерия</Cell>
+              <Cell onClick={() => {telegram.BackButton.onClick(() => {telegram.BackButton.hide(); setactivemenu("hack")}); setactivemenu("playparsing"); telegram.BackButton.show();}} icon={Telegram}
+              righttext="10 ссылок взлом"
+              >Парсинг</Cell>
+              <Cell disable icon={Telegram}>Асемблерasd</Cell>
               <Cell disable icon={Telegram}>Асемблерasd</Cell>
               <Cell disable icon={Telegram}>Асемблерasd</Cell>
               {/* onClick={() => telegram.openTelegramLink({path_full: "/hackerapps?startattach=send-assetCurrency__&choose=users"})} icon={Telegram} */}

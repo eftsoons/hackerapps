@@ -13,8 +13,9 @@
     color: #ffffff;
     cursor: pointer;
     transition: 0.5s;
-    background-color: var(--tg-theme-button-color);
+    background-color: var(--tg-theme-button-color, #4bb34b);
 }
+
 
 a {
     text-decoration: none;

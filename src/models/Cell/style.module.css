@@ -5,7 +5,7 @@
     align-items: center;
     cursor: pointer;
     transition: 0.5s;
-    background-color: var(--tg-theme-button-color);
+    background-color: var(--tg-theme-button-color, #4bb34b);
 }
 
 .cell:hover {
@@ -19,6 +19,19 @@
     border-radius: 30px;
     display: flex;
     align-items: center;
+}
+
+.textdiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    white-space: nowrap;
+}
+
+.righttext {
+    font-size: 20px;
+    color: red
 }
 
 .divimage {
@@ -53,5 +66,6 @@
 }
 
 .text {
+    margin-left: 10px;
     font-size: 20px;
 }
