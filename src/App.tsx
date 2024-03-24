@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 
 // import Chart from 'chart.js/auto';
 
-import {Header, Bottom, Main, Icon, Menu, Text, StatsGame, ButtonGroup, Button, Window, Cell, GroupCell} from "./models"
+import {Header, Bottom, Main, Icon, Menu, StatsGame, ButtonGroup, Button, Window, Cell, GroupCell} from "./models"
 import {Times, Charging} from "./models/Header/module"
 import {StatsTG, StatsVK, Stats} from "./models/StatsGame/module"
 
