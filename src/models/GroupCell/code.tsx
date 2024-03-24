@@ -5,7 +5,7 @@ import style from "./style.module.css"
 import {Node} from "../../Props"
 
 const GroupCell = ({children} : Node) => {
-    return Children.toArray(children).map((children, index) => (
+    return Children.toArray(children).map((children) => (
         <Fragment>
             {/* {index != 0 && <div className={style.seperator} />} */}
             <div className={style.groupcell}>
