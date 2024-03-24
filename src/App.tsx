@@ -26,6 +26,8 @@ function App() {
     telegram.ready();
     telegram.expand();
 
+    console.log(telegram.initDataUnsafe.user)
+
     telegram.BackButton.onClick(() => {telegram.BackButton.hide(); setactivemenu("profile")})
     telegram.setHeaderColor("#181818")
     telegram.setBackgroundColor("#181818")
@@ -60,7 +62,12 @@ function App() {
 
       <Main activemenu={activemenu}>
           <Menu id="profile">
-            <Window>asd</Window>
+            <Window>
+              {/* <img style={{width: "50px"}} src={telegram.initDataUnsafe.user.photo_url} alt="" /> */}
+              {telegram.initDataUnsafe.user.first_name} {telegram.initDataUnsafe.user.last_name}
+              <br />
+              Тут история вашего взлома, ваши взломанные пользователи, количество монет, ваш ранг, ваше фото + ФИО
+            </Window>
           </Menu>
           <Menu id="hack">
           {/* <img style={{ width: "150px", height: "150px"}} src={VK} alt="Методы взлома и взлом" />
