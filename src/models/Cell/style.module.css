@@ -1,0 +1,43 @@
+.cell {
+    height: 10vh;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s;
+    background-color: red;
+}
+
+.cell:hover {
+    transition: 0.5s;
+    background-color: rgba(117, 117, 117, 0.25);
+}
+
+.celldisable {
+    background-color: black;
+    height: 10vh;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.image {
+    width: 50px;
+}
+
+.icongroup {
+    display: flex;
+    align-items: center;
+}
+
+.seperator {
+    background-color: blue;
+    height: 9vh;
+    border-radius: 15px;
+    width: 1vw;
+}
+
+.text {
+    margin-left: 50px;
+    font-size: 10px;
+}

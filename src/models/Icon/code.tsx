@@ -1,6 +1,9 @@
 import { ReactNode, Fragment} from 'react';
 import style from './style.module.css';
 
+// @ts-expect-error
+const telegram = window.Telegram.WebApp;
+
 interface Icon {
     id?: string;
     children: ReactNode;
@@ -12,7 +15,7 @@ const Icon = ({ id, children, active, setactive }: Icon) => {
   return (
     <Fragment>
         {setactive ? 
-        <div onClick={() => setactive(id)} className={id == active ? style.icon2 : style.icon}>
+        <div onClick={() => {setactive(id); telegram.BackButton.hide()}} className={id == active ? style.icon2 : style.icon}>
             {children}
         </div> 
     : 

@@ -1,0 +1,13 @@
+.seperator {
+    height: 0.75vh;
+    width: 100%;
+    background-color: blue;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: rgba(117, 117, 117, 0.25);
+    border-radius: 5px;
+}
+
+.groupcell {
+    margin-bottom: 5px;
+}

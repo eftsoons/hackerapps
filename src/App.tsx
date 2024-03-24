@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 
 // import Chart from 'chart.js/auto';
 
-import {Header, Bottom, Main, Icon, Menu, Text, StatsGame, ButtonGroup, Button} from "./models"
+import {Header, Bottom, Main, Icon, Menu, Text, StatsGame, ButtonGroup, Button, Window, Cell, GroupCell} from "./models"
 import {Times, Charging} from "./models/Header/module"
 import {StatsTG, StatsVK, Stats} from "./models/StatsGame/module"
 
@@ -51,9 +51,23 @@ function App() {
             <Button onClick={() => telegram.openLink("https://t.me/share/url?url=asdasd&text=Ты был взломан")}>Текст механики взлома</Button>
           </Menu>
           <Menu id="hack">
-          <img style={{ width: "150px", height: "150px"}} src={VK} alt="Методы взлома и взлом" />
-          методы взлома и взлом
-          <Button href="https://t.me/share/url?url=t.me/botname/app?startapp=something&text=something">asd</Button>
+          {/* <img style={{ width: "150px", height: "150px"}} src={VK} alt="Методы взлома и взлом" />
+          методы взлома и взлом */}
+          <Window>
+            <GroupCell>
+              <Cell onClick={() => console.log(123)} icon={Telegram}>Асемблер</Cell>
+              <Cell onClick={() => telegram.openTelegramLink("/hackerapps?startattach=send-assetCurrency__&choose=users")} icon={Telegram}>Социальная инжерия</Cell>
+              <Cell icon={Telegram}>Парсинг</Cell>
+              <Cell disable={true} icon={Telegram}>Асемблерasd</Cell>
+              <Cell disable={true} icon={Telegram}>Асемблерasd</Cell>
+            </GroupCell>
+            {/* <br />
+            Социальная инжерия (Заставить человека написать определенное слово)
+            <br />
+            Парсинг 
+            <br /> */}
+          </Window>
+          {/* <Button href="https://t.me/share/url?url=t.me/botname/app?startapp=something&text=something">asd</Button> */}
           </Menu>
           <Menu id="top">
           Топ игроков

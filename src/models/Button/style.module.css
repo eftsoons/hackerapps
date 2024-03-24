@@ -21,16 +21,11 @@ a {
     user-select: none;
 }
 
-a:active {
-    user-select: none;
-}
-
 .button:hover {
     transition: 0.5s;
     background-color: var(--tg-theme-hint-color);
     user-select: none;
 }
-
 
 .button:active, .buttonandroid:active {
     transition: none;
