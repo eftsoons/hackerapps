@@ -56,7 +56,7 @@ function App() {
           <Window>
             <GroupCell>
               <Cell onClick={() => console.log(123)} icon={Telegram}>Асемблер</Cell>
-              <Cell onClick={() => telegram.openTelegramLink("https://eftsoons.github.io/hackerapps/hackerapps?startattach=send-assetCurrency__&choose=users")} icon={Telegram}>Социальная инжерия</Cell>
+              <Cell onClick={() => telegram.openTelegramLink({path_full: "/hackerapps?startattach=send-assetCurrency__&choose=users"})} icon={Telegram}>Социальная инжерия</Cell>
               <Cell icon={Telegram}>Парсинг</Cell>
               <Cell disable={true} icon={Telegram}>Асемблерasd</Cell>
               <Cell disable={true} icon={Telegram}>Асемблерasd</Cell>
