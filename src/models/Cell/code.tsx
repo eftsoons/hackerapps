@@ -1,3 +1,5 @@
+import { Fragment } from "react"
+
 import style from "./style.module.css"
 
 interface Cell {
@@ -9,13 +11,23 @@ interface Cell {
 
 const Cell = ({children, icon, disable, onClick} : Cell) => {
     return (
+    <Fragment>
+        {icon ?
     <div onClick={onClick} className={!disable ? style.cell : style.celldisable}>
         <div className={style.icongroup}>
-            <img className={style.image} src={icon} alt="" />
-            <div className={style.seperator} />
+            <div className={style.divimage}>
+             <img className={style.image} src={icon} alt="" />
+            </div>
         </div>
         <span className={style.text}>{children}</span>
-    </div>)
+    </div> 
+    : 
+    <div onClick={onClick} className={!disable ? style.cell : style.celldisable}>
+        <span className={style.text}>{children}</span>
+    </div>
+     }
+    </Fragment>
+    )
 }
 
 export default Cell

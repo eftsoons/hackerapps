@@ -9,8 +9,8 @@
 }
 
 body {
-    background-color: var(--tg-theme-secondary-bg-color);
-    color: var(--tg-theme-text-color);
+    background-color: #181818;
+    color: #ffffff;
     overflow: hidden;
 }
 
