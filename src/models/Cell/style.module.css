@@ -6,6 +6,7 @@
     transition: 0.5s;
     border-radius: 30px;
     background-color: var(--tg-theme-button-color, #4bb34b);
+    user-select: none;
 }
 
 .cell:hover {
@@ -51,12 +52,12 @@
 }
 
 .text {
-    font-size: 20px;
+    font-size: 5px;
     flex-grow: 1;
 }
 
 .righttext {
-    font-size: 20px;
+    font-size: 5px;
     color: black;
     margin-right: 2%;
 }
