@@ -64,7 +64,6 @@ function App() {
           <Menu id="profile">
             <Window>
               {/* <img style={{width: "50px"}} src={telegram.initDataUnsafe.user.photo_url} alt="" /> */}
-              {telegram.initDataUnsafe.user.first_name} {telegram.initDataUnsafe.user.last_name}
               <br />
               Тут история вашего взлома, ваши взломанные пользователи, количество монет, ваш ранг, ваше фото + ФИО
             </Window>

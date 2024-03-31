@@ -3,7 +3,25 @@
     user-select: none;
     color:#5bab50;
     fill: #5bab50;
-    justify-content: space-between;
     display: flex;
     align-items: center;
+    flex-grow: 1;
+}
+
+.text2 {
+    font-size: 15px;
+    user-select: none;
+    color:#5bab50;
+    fill: #5bab50;
+    justify-content: end;
+    display: flex;
+    align-items: center;
+}
+
+.text2 div {
+    display: flex;
+    align-items: center;
+    user-select: none;
+    font-size: 15px;
+    margin-left: 1.5vw;
 }
