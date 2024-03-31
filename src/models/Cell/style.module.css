@@ -1,10 +1,10 @@
 .cell {
     height: 10vh;
-    border-radius: 30px;
     display: flex;
     align-items: center;
     cursor: pointer;
     transition: 0.5s;
+    border-radius: 30px;
     background-color: var(--tg-theme-button-color, #4bb34b);
 }
 
@@ -15,8 +15,9 @@
 
 .celldisable {
     position: absolute;
+    cursor: default;
     height: 10vh;
-    width: 96.5%;
+    width: 96%;
     border-radius: 30px;
     background-color: rgba(1, 1, 1, 0.5);
     z-index: 1;
@@ -27,18 +28,19 @@
     align-items: center;
     width: 100%;
     white-space: nowrap;
+    margin-left: 15px;
 }
 
 .image {
-    width: 75%;
+    width: 100%;
 }
 
 .icongroup {
-    width: 10%;
     border-radius: 15px;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    margin-left: 15px;
+    width: 5%;
 }
 
 .seperator {
@@ -49,7 +51,6 @@
 }
 
 .text {
-    margin-left: 10px;
     font-size: 20px;
     flex-grow: 1;
 }

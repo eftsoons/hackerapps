@@ -16,9 +16,8 @@ const Cell = ({children, icon, disable, onClick, righttext} : Cell) => {
         {icon ?
         <Fragment>
             {disable ? 
-                <div>
-                    <div className={style.celldisable}></div> 
                     <div className={style.cell}>
+                        <div className={style.celldisable}></div> 
                         <div className={style.icongroup}>
                             <img className={style.image} src={icon} alt="" />
                         </div>
@@ -27,7 +26,6 @@ const Cell = ({children, icon, disable, onClick, righttext} : Cell) => {
                             <span className={style.righttext}>Недоступно</span>
                         </div>
                     </div> 
-                </div>
                 :
                 <div onClick={onClick} className={style.cell}>
                     <div className={style.icongroup}>
@@ -43,15 +41,13 @@ const Cell = ({children, icon, disable, onClick, righttext} : Cell) => {
     : 
         <Fragment>
             {disable ? 
-                <div>
+                <div className={style.cell}>
                     <div className={style.celldisable}></div> 
-                    <div className={style.cell}>
-                        <div className={style.textdiv}>
-                            <span className={style.text}>{children}</span>
-                            <span className={style.righttext}>Недоступно</span>
-                        </div>
-                    </div> 
-                </div>
+                    <div className={style.textdiv}>
+                        <span className={style.text}>{children}</span>
+                        <span className={style.righttext}>Недоступно</span>
+                    </div>
+                </div> 
                 :
                 <div onClick={onClick} className={style.cell}>
                     <div className={style.textdiv}>
