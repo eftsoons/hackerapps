@@ -52,12 +52,12 @@
 }
 
 .text {
-    font-size: 5px;
+    font-size: 20px;
     flex-grow: 1;
 }
 
 .righttext {
-    font-size: 5px;
+    font-size: 20px;
     color: black;
     margin-right: 2%;
 }
