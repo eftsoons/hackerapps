@@ -39,6 +39,14 @@ function App() {
     return () => clearInterval(interval);
   }, [])
 
+  function nextmenu(namemenu: string, backnamenu?: string) {
+    setactivemenu(namemenu); 
+    if (backnamenu) {
+      telegram.BackButton.onClick(() => {telegram.BackButton.hide(); setactivemenu(backnamenu)});
+      telegram.BackButton.show();
+    }
+  }
+
   return (
     <>
       <Header>
@@ -65,7 +73,7 @@ function App() {
             <Window>
               {/* <img style={{width: "50px"}} src={telegram.initDataUnsafe.user.photo_url} alt="" /> */}
               <br />
-              Тут история вашего взлома, ваши взломанные пользователи, количество монет, ваш ранг, ваше фото + ФИО
+              Тут история вашего взлома, ваши взломанные пользователи, количество монет, ваш ранг, ваше фото + ФИО + доступные ссылки взлома
             </Window>
           </Menu>
           <Menu id="hack">
@@ -74,21 +82,17 @@ function App() {
           <Window>
             <GroupCell>
               <Cell 
-                onClick={() => {
-                telegram.BackButton.onClick(() => {telegram.BackButton.hide(); setactivemenu("hack")});
-                setactivemenu("playassembler"); 
-                telegram.BackButton.show();
-                }} 
+                onClick={() => nextmenu("playassembler", "hack")} 
                 icon={assembler}
                 righttext="1 ссылка взлом"
                 >
                 Асемблер
               </Cell>
               <Cell 
-              onClick={() => {telegram.BackButton.onClick(() => {telegram.BackButton.hide(); setactivemenu("hack")}); setactivemenu("playnaeb"); telegram.BackButton.show();}}
+              onClick={() => nextmenu("playnaeb", "hack")}
               righttext="5 ссылок взлом"
-              >Социальная инжерия</Cell>
-              <Cell onClick={() => {telegram.BackButton.onClick(() => {telegram.BackButton.hide(); setactivemenu("hack")}); setactivemenu("playparsing"); telegram.BackButton.show();}} icon={Telegram}
+              >Социальная инженерия</Cell>
+              <Cell onClick={() => nextmenu("playparsing", "hack")} icon={Telegram}
               righttext="10 ссылок взлом"
               >Парсинг</Cell>
               <Cell disable icon={Telegram}>Асемблерasd</Cell>
@@ -97,7 +101,7 @@ function App() {
               {/* onClick={() => telegram.openTelegramLink({path_full: "/hackerapps?startattach=send-assetCurrency__&choose=users"})} icon={Telegram} */}
             </GroupCell>
             {/* <br />
-            Социальная инжерия (Заставить человека написать определенное слово)
+            Социальная инженерия (Заставить человека написать определенное слово)
             <br />
             Парсинг 
             <br /> */}
@@ -114,8 +118,7 @@ function App() {
                 setclick(click + 1); 
               } else {
                 setclick(0);
-                setactivemenu("secretsuper")
-                telegram.BackButton.show();
+                nextmenu("secretsuper", "secret")
               }
           }}><Money height='20vh' width='20vw' /></div>
           </Menu>

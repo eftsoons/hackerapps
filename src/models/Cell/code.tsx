@@ -14,25 +14,54 @@ const Cell = ({children, icon, disable, onClick, righttext} : Cell) => {
     return (
     <Fragment>
         {icon ?
-    <div onClick={onClick} className={!disable ? style.cell : style.celldisable}>
-        <div className={style.icongroup}>
-            <div className={style.divimage}>
-             <img className={style.image} src={icon} alt="" />
-            </div>
-        </div>
-        <div className={style.textdiv}>
-            <span className={style.text}>{children}</span>
-            <span className={style.righttext}>{righttext}</span>
-        </div>
-    </div> 
+        <Fragment>
+            {disable ? 
+                <div>
+                    <div className={style.celldisable}></div> 
+                    <div className={style.cell}>
+                        <div className={style.icongroup}>
+                            <img className={style.image} src={icon} alt="" />
+                        </div>
+                        <div className={style.textdiv}>
+                            <span className={style.text}>{children}</span>
+                            <span className={style.righttext}>Недоступно</span>
+                        </div>
+                    </div> 
+                </div>
+                :
+                <div onClick={onClick} className={style.cell}>
+                    <div className={style.icongroup}>
+                        <img className={style.image} src={icon} alt="" />
+                    </div>
+                    <div className={style.textdiv}>
+                        <span className={style.text}>{children}</span>
+                        <span className={style.righttext}>{righttext}</span>
+                    </div>
+                </div>
+            }
+        </Fragment>
     : 
-    <div onClick={onClick} className={!disable ? style.cell : style.celldisable}>
-        <div className={style.textdiv}>
-            <span className={style.text}>{children}</span>
-            <span className={style.righttext}>{righttext}</span>
-        </div>
-    </div>
-     }
+        <Fragment>
+            {disable ? 
+                <div>
+                    <div className={style.celldisable}></div> 
+                    <div className={style.cell}>
+                        <div className={style.textdiv}>
+                            <span className={style.text}>{children}</span>
+                            <span className={style.righttext}>Недоступно</span>
+                        </div>
+                    </div> 
+                </div>
+                :
+                <div onClick={onClick} className={style.cell}>
+                    <div className={style.textdiv}>
+                        <span className={style.text}>{children}</span>
+                        <span className={style.righttext}>{righttext}</span>
+                    </div>
+                </div>
+            }
+        </Fragment>
+        }
     </Fragment>
     )
 }

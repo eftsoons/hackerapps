@@ -14,48 +14,31 @@
 }
 
 .celldisable {
-    background-color: black;
+    position: absolute;
     height: 10vh;
+    width: 96.5%;
     border-radius: 30px;
-    display: flex;
-    align-items: center;
+    background-color: rgba(1, 1, 1, 0.5);
+    z-index: 1;
 }
 
 .textdiv {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 80%;
+    width: 100%;
     white-space: nowrap;
 }
 
-.righttext {
-    font-size: 20px;
-    color: red
-}
-
-.divimage {
-    margin-left: 10%;
-    margin-right: 5%;
-    width: 100%;
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .image {
-    width: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 75%;
 }
 
 .icongroup {
+    width: 10%;
+    border-radius: 15px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 15%;
+    justify-content: flex-end;
 }
 
 .seperator {
@@ -68,4 +51,11 @@
 .text {
     margin-left: 10px;
     font-size: 20px;
+    flex-grow: 1;
+}
+
+.righttext {
+    font-size: 20px;
+    color: black;
+    margin-right: 2%;
 }
