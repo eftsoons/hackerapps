@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
 
+import bridge from "@vkontakte/vk-bridge"
+
 // import Chart from 'chart.js/auto';
 
 import {Header, Bottom, Main, Icon, Menu, StatsGame, ButtonGroup, Button, Window, Cell, GroupCell} from "./models"
@@ -21,12 +23,13 @@ function App() {
   const [time, settime] = useState<Date>(new Date())
   const [click, setclick] = useState(0)
   const [activemenu, setactivemenu] = useState("profile")
+  const [user, setuser] = useState({first_name: "Александр", last_name: "Федорович", photo: "asd"})
   
   useEffect(() => {
     telegram.ready();
     telegram.expand();
 
-    console.log(telegram.initDataUnsafe.user)
+    console.log(telegram.initDataUnsafe)
 
     telegram.BackButton.onClick(() => {telegram.BackButton.hide(); setactivemenu("profile")})
     telegram.setHeaderColor("#181818")
@@ -35,6 +38,25 @@ function App() {
     let interval = setInterval(() => {
       settime(new Date());
     }, 500);
+
+    async function fetchData() {
+      if (telegram.initDataUnsafe.user) {
+        setuser({
+          first_name: telegram.initDataUnsafe.user.first_name, 
+          last_name: telegram.initDataUnsafe.user.last_name,
+          photo: "https://sun75-2.userapi.com/s/v1/if2/tITQ5bySaMd5DxzDvj_FK23vWG_rajznbafawMPVvo6AELi0oQY3j29GzheFfe7wcE9hoDeS6oA9da24OH1FPODB.jpg?quality=95&crop=63,0,1141,1141&as=50x50,100x100,200x200,400x400&ava=1&u=svMfBa0kU-GORlIDTaRG9V0N17oSXj-1PpUXnTjKLnQ&cs=200x200"
+        })
+      } else {
+        const user = await bridge.send("VKWebAppGetUserInfo");
+        setuser({
+          first_name: user.first_name, 
+          last_name: user.last_name,
+          photo: "asd"
+        })
+      }
+    }
+
+    fetchData()
 
     return () => clearInterval(interval);
   }, [])
@@ -72,8 +94,28 @@ function App() {
           <Menu id="profile">
             <Window>
               {/* <img style={{width: "50px"}} src={telegram.initDataUnsafe.user.photo_url} alt="" /> */}
-              <br />
-              Тут история вашего взлома, ваши взломанные пользователи, количество монет, ваш ранг, ваше фото + ФИО + доступные ссылки взлома
+              {/* Тут история вашего взлома, ваши взломанные пользователи, количество монет, ваш ранг, ваше фото + ФИО + доступные ссылки взлома */}
+              <div className='stats'>
+                <img src="https://sun75-2.userapi.com/s/v1/if2/tITQ5bySaMd5DxzDvj_FK23vWG_rajznbafawMPVvo6AELi0oQY3j29GzheFfe7wcE9hoDeS6oA9da24OH1FPODB.jpg?quality=95&crop=63,0,1141,1141&as=50x50,100x100,200x200,400x400&ava=1&u=svMfBa0kU-GORlIDTaRG9V0N17oSXj-1PpUXnTjKLnQ&cs=200x200" alt="" />
+                <div>
+                  <div className='statsusername'>
+                    {`${user.first_name} ${user.last_name}`}
+                  </div>
+                  <div className='statsusername2'>
+                    Взлома: 0 акков
+                  </div>
+                </div>
+              </div>
+              <GroupCell>
+                Взломанные:
+                <Cell 
+                icon="https://sun75-2.userapi.com/s/v1/if2/tITQ5bySaMd5DxzDvj_FK23vWG_rajznbafawMPVvo6AELi0oQY3j29GzheFfe7wcE9hoDeS6oA9da24OH1FPODB.jpg?quality=95&crop=63,0,1141,1141&as=50x50,100x100,200x200,400x400&ava=1&u=svMfBa0kU-GORlIDTaRG9V0N17oSXj-1PpUXnTjKLnQ&cs=200x200" 
+                righttext="+100$">
+                {`${user.first_name} ${user.last_name}`}
+                </Cell>
+                <Cell righttext="+100$">asd</Cell>
+                <Cell righttext="+100$" bottomtext="test">asd</Cell>
+              </GroupCell>
             </Window>
           </Menu>
           <Menu id="hack">
@@ -97,7 +139,6 @@ function App() {
               >Парсинг</Cell>
               <Cell disable icon={Telegram}>Асемблерasd</Cell>
               <Cell disable icon={Telegram}>Асемблерasd</Cell>
-              <Cell disable icon={Telegram}>Асемблерasd</Cell>
               {/* onClick={() => telegram.openTelegramLink({path_full: "/hackerapps?startattach=send-assetCurrency__&choose=users"})} icon={Telegram} */}
             </GroupCell>
             {/* <br />
@@ -109,7 +150,19 @@ function App() {
           {/* <Button href="https://t.me/share/url?url=t.me/botname/app?startapp=something&text=something">asd</Button> */}
           </Menu>
           <Menu id="top">
-          Топ игроков
+            <Window>
+          <div className='top'>
+            <div className='topplayer'><img src={Telegram} alt=""/></div>
+            <div className='topseperator' />
+            <div className='topgroup'><img src={VK} alt=""/></div>
+          </div>
+          <GroupCell>
+            <Cell righttext='1000$'>Группа 123</Cell>
+            <Cell righttext='500$'>Игрок 123</Cell>
+            <Cell righttext='150$'>Группа 321</Cell>
+            <Cell righttext='50$'>Игрок 321</Cell>
+          </GroupCell>
+          </Window>
           </Menu>
           <Menu style={{display: "flex", alignItems: "center", justifyContent: "center"}} id="secret">
             {/* what?listeng? */}

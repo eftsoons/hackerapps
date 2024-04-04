@@ -8,57 +8,31 @@ interface Cell {
     disable?: boolean
     onClick?: () => void
     righttext?: string
+    bottomtext?: string
 }
 
-const Cell = ({children, icon, disable, onClick, righttext} : Cell) => {
+const Cell = ({children, icon, disable, onClick, righttext, bottomtext} : Cell) => {
     return (
-    <Fragment>
-        {icon ?
-        <Fragment>
-            {disable ? 
-                    <div className={style.cell}>
-                        <div className={style.celldisable}></div> 
-                        <div className={style.icongroup}>
-                            <img className={style.image} src={icon} alt="" />
-                        </div>
-                        <div className={style.textdiv}>
-                            <span className={style.text}>{children}</span>
-                            <span className={style.righttext}>Недоступно</span>
-                        </div>
-                    </div> 
-                :
-                <div onClick={onClick} className={style.cell}>
-                    <div className={style.icongroup}>
-                        <img className={style.image} src={icon} alt="" />
-                    </div>
-                    <div className={style.textdiv}>
-                        <span className={style.text}>{children}</span>
-                        <span className={style.righttext}>{righttext}</span>
-                    </div>
-                </div>
+        <div onClick={onClick} className={disable ? style.celldisable : style.cell}>
+            {icon &&
+            <div className={style.icongroup}>
+                <img className={style.image} src={icon} alt="" />
+            </div>
             }
-        </Fragment>
-    : 
-        <Fragment>
-            {disable ? 
-                <div className={style.cell}>
-                    <div className={style.celldisable}></div> 
-                    <div className={style.textdiv}>
-                        <span className={style.text}>{children}</span>
-                        <span className={style.righttext}>Недоступно</span>
+            <div className={style.textdiv}>
+                <div className={style.text}>
+                    <div className={style.maintext}>
+                        {children}
                     </div>
-                </div> 
-                :
-                <div onClick={onClick} className={style.cell}>
-                    <div className={style.textdiv}>
-                        <span className={style.text}>{children}</span>
-                        <span className={style.righttext}>{righttext}</span>
+                    {bottomtext &&
+                    <div className={style.bottomtext}>
+                        {bottomtext}
                     </div>
+                    }
                 </div>
-            }
-        </Fragment>
-        }
-    </Fragment>
+                <span className={style.righttext}>{righttext}</span>
+            </div>
+        </div> 
     )
 }
 

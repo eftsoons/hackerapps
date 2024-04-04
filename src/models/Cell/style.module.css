@@ -1,47 +1,48 @@
 .cell {
-    height: 10vh;
+    height: 12.5vh;
     display: flex;
     align-items: center;
     cursor: pointer;
     transition: 0.5s;
-    border-radius: 30px;
+    border-radius: 15px;
     background-color: var(--tg-theme-button-color, #4bb34b);
     user-select: none;
+    padding: 0.5% 2% 0.5% 2%;
 }
 
 .cell:hover {
     transition: 0.5s;
-    background-color: rgba(117, 117, 117, 0.25);
+    filter: brightness(75%);
 }
 
 .celldisable {
-    position: absolute;
-    cursor: default;
-    height: 10vh;
-    width: 96%;
-    border-radius: 30px;
-    background-color: rgba(1, 1, 1, 0.5);
-    z-index: 1;
+    display: flex;
+    align-items: center;
+    height: 12.5vh;
+    border-radius: 15px;
+    background-color: var(--tg-theme-button-color, #4bb34b);
+    filter: brightness(50%);
+    user-select: none;
+    padding: 0.5% 2% 0.5% 2%;
 }
 
 .textdiv {
     display: flex;
     align-items: center;
     width: 100%;
-    white-space: nowrap;
-    margin-left: 15px;
+    margin-left: 10px;
 }
 
 .image {
     width: 100%;
+    border-radius: 30px;
 }
 
 .icongroup {
-    border-radius: 15px;
+    border-radius: 30px;
     display: flex;
     align-items: center;
-    margin-left: 15px;
-    width: 8%;
+    width: 10%;
 }
 
 .seperator {
@@ -52,12 +53,24 @@
 }
 
 .text {
-    font-size: 20px;
-    flex-grow: 1;
+    width: 70%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.maintext {
+    font-size: 0.75rem;
+}
+
+.bottomtext {
+    font-size: 0.5rem;
 }
 
 .righttext {
+    display: flex;
+    justify-content: flex-end;
     font-size: 20px;
     color: black;
-    margin-right: 2%;
+    width: 40%;
 }
