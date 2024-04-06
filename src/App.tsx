@@ -60,7 +60,7 @@ function App() {
 
     document.addEventListener("mousemove", e => {
       Object.assign(document.documentElement, {
-          style: `${document.documentElement.style.cssText}; --move-x: ${(e.clientY - window.innerHeight / 2)}deg; --move-y: ${(e.clientX - window.innerWidth / 2)}deg`
+          style: `${document.documentElement.style.cssText}; --move-x: ${(e.clientY - window.innerHeight / 2) * 0.5}deg; --move-y: ${(e.clientX - window.innerWidth / 2) * 0.5}deg`
       })
   })
 
