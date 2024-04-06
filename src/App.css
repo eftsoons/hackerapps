@@ -19,14 +19,14 @@ body {
     fill: rgb(91,171,80);
     background-color: none;
     animation: glow 0.75s  ease-in-out infinite alternate;
-    transition: 0.1s;
+    transition: 0.5s;
     transform: scale(1);
 }
 
 .listeng:active {
-    transition: 0.1s;
     transform-style: preserve-3d;
     transform: scale(0.95) rotateX(var(--move-x)) rotateY(var(--move-y));
+    transition: transform 0.1s ease-in-out;
     will-change: transform;
 }
 
