@@ -34,7 +34,6 @@ function App() {
     telegram.BackButton.onClick(() => {telegram.BackButton.hide(); setactivemenu("profile")})
     telegram.setHeaderColor("#181818")
     telegram.setBackgroundColor("#181818")
-    telegram.HapticFeedback.notificationOccurred("error")
 
     let interval = setInterval(() => {
       settime(new Date());
@@ -184,9 +183,11 @@ function App() {
             <div className="listeng" onClick={() => {
               if (click < 40) {
                 setclick(click + 1); 
+                telegram.HapticFeedback.notificationOccurred("warning")
               } else {
                 setclick(0);
                 nextmenu("secretsuper", "secret")
+                telegram.HapticFeedback.notificationOccurred("error")
               }
           }}><Money height='20vh' width='20vw' /></div>
           </Menu>
