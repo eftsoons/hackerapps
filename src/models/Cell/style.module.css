@@ -1,5 +1,5 @@
 .cell {
-    height: 12.5vh;
+    min-height: 50px;
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -16,21 +16,14 @@
 }
 
 .celldisable {
+    min-height: 50px;
     display: flex;
     align-items: center;
-    height: 12.5vh;
     border-radius: 15px;
     background-color: var(--tg-theme-button-color, #4bb34b);
     filter: brightness(50%);
     user-select: none;
-    padding: 0.5% 2% 0.5% 2%;
-}
-
-.textdiv {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    margin-left: 10px;
+    padding: 0.5% 1% 0.5% 1%;
 }
 
 .image {
@@ -52,25 +45,37 @@
     width: 0.5vw;
 }
 
+.textdivicon {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin-left: 10px;
+}
+
+.textdiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 10px;
+}
+
 .text {
-    width: 70%;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
 }
 
 .maintext {
-    font-size: 0.75rem;
+    font-size: 0.75em;
 }
 
 .bottomtext {
-    font-size: 0.5rem;
+    font-size: 0.5em;
 }
 
 .righttext {
-    display: flex;
-    justify-content: flex-end;
     font-size: 20px;
     color: black;
-    width: 40%;
 }

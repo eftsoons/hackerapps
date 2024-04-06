@@ -1,4 +1,5 @@
 .window {
+    text-align: center;
     background-color: rgba(117, 117, 117, 0.25);
     height: 78vh;
     border-radius: 15px;

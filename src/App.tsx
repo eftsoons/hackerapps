@@ -8,7 +8,7 @@ import {Header, Bottom, Main, Icon, Menu, StatsGame, ButtonGroup, Button, Window
 import {Times, Charging} from "./models/Header/module"
 import {StatsTG, StatsVK, Stats} from "./models/StatsGame/module"
 
-import logo from "./img/4000x4000.png"
+import logo from "./img/500x500.png"
 import assembler from "./img/20181030112233_logoASM_new_kolko.png"
 
 import {Telegram, VK, Chart, Money, Cup, Computer, Mobile} from './svg'
@@ -34,6 +34,7 @@ function App() {
     telegram.BackButton.onClick(() => {telegram.BackButton.hide(); setactivemenu("profile")})
     telegram.setHeaderColor("#181818")
     telegram.setBackgroundColor("#181818")
+    telegram.HapticFeedback.notificationOccurred("error")
 
     let interval = setInterval(() => {
       settime(new Date());
@@ -115,6 +116,9 @@ function App() {
                 </Cell>
                 <Cell righttext="+100$">asd</Cell>
                 <Cell righttext="+100$" bottomtext="test">asd</Cell>
+                <Cell righttext="+100$" bottomtext="test">asd</Cell>
+                <Cell righttext="+100$" bottomtext="test">asd</Cell>
+                <Cell righttext="+100$" bottomtext="test">asd</Cell>
               </GroupCell>
             </Window>
           </Menu>
@@ -139,6 +143,12 @@ function App() {
               >Парсинг</Cell>
               <Cell disable icon={Telegram}>Асемблерasd</Cell>
               <Cell disable icon={Telegram}>Асемблерasd</Cell>
+              <Cell righttext='1000$'>Группа 123</Cell>
+              <Cell righttext='1000$'>Группа 123</Cell>
+              <Cell righttext='1000$'>Группа 123</Cell>
+              <Cell righttext='1000$'>Группа 123</Cell>
+              <Cell righttext='1000$'>Группа 123</Cell>
+              <Cell righttext='1000$'>Группа 123</Cell>
               {/* onClick={() => telegram.openTelegramLink({path_full: "/hackerapps?startattach=send-assetCurrency__&choose=users"})} icon={Telegram} */}
             </GroupCell>
             {/* <br />
@@ -160,6 +170,11 @@ function App() {
             <Cell righttext='1000$'>Группа 123</Cell>
             <Cell righttext='500$'>Игрок 123</Cell>
             <Cell righttext='150$'>Группа 321</Cell>
+            <Cell righttext='50$'>Игрок 321</Cell>
+            <Cell righttext='50$'>Игрок 321</Cell>
+            <Cell righttext='50$'>Игрок 321</Cell>
+            <Cell righttext='50$'>Игрок 321</Cell>
+            <Cell righttext='50$'>Игрок 321</Cell>
             <Cell righttext='50$'>Игрок 321</Cell>
           </GroupCell>
           </Window>
@@ -220,7 +235,7 @@ function App() {
             </ButtonGroup>
           </Menu>
           <Menu style={{display: "flex", alignItems: "center", justifyContent: "center"}} id="secretsuper">
-            <img width={250} src={logo} />
+            <img style={{borderRadius: "15px"}} width={250} src={logo} />
           </Menu>
           <Menu style={{display: "flex", alignItems: "center", justifyContent: "center"}} id="playassembler">
             Миниигра Асемблер

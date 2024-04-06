@@ -11,3 +11,10 @@
 .groupcell {
     margin-bottom: 5px;
 }
+
+.groupmain {
+    height: 80%;
+    overflow: hidden;
+    overflow-y: scroll;
+    border-radius: 15px;
+}

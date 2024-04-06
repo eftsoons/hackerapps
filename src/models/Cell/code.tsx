@@ -19,16 +19,14 @@ const Cell = ({children, icon, disable, onClick, righttext, bottomtext} : Cell) 
                 <img className={style.image} src={icon} alt="" />
             </div>
             }
-            <div className={style.textdiv}>
+            <div className={icon ? style.textdivicon : style.textdiv}>
                 <div className={style.text}>
                     <div className={style.maintext}>
                         {children}
                     </div>
-                    {bottomtext &&
                     <div className={style.bottomtext}>
                         {bottomtext}
                     </div>
-                    }
                 </div>
                 <span className={style.righttext}>{righttext}</span>
             </div>
