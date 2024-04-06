@@ -39,8 +39,6 @@ function App() {
       settime(new Date());
     }, 500);
 
-    console.log(document)
-
     async function fetchData() {
       if (telegram.initDataUnsafe.user) {
         setuser({
@@ -59,6 +57,12 @@ function App() {
     }
 
     fetchData()
+
+    document.addEventListener("mousemove", e => {
+      Object.assign(document.documentElement, {
+          style: `${document.documentElement.style.cssText}; --move-x: ${(e.clientY - window.innerHeight / 2)}deg; --move-y: ${(e.clientX - window.innerWidth / 2)}deg`
+      })
+  })
 
     return () => clearInterval(interval);
   }, [])
@@ -115,8 +119,7 @@ function App() {
                 righttext="+100$">
                 {`${user.first_name} ${user.last_name}`}
                 </Cell>
-                <Cell righttext="+100$">asd</Cell>
-                <Cell righttext="+100$" bottomtext="test">asd</Cell>
+                <Cell disable onClick={() => console.log(123)} righttext="+100$">asd</Cell>
                 <Cell righttext="+100$" bottomtext="test">asd</Cell>
                 <Cell righttext="+100$" bottomtext="test">asd</Cell>
                 <Cell righttext="+100$" bottomtext="test">asd</Cell>

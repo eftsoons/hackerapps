@@ -13,10 +13,10 @@ interface Cell {
 
 const Cell = ({children, icon, disable, onClick, righttext, bottomtext} : Cell) => {
     return (
-        <div onClick={onClick} className={disable ? style.celldisable : style.cell}>
+        <div onClick={() => !disable && onClick && onClick()} className={disable ? style.celldisable : style.cell}>
             {icon &&
             <div className={style.icongroup}>
-                <img className={style.image} src={icon} alt="" />
+                <img loading="lazy" className={style.image} src={icon} alt="" />
             </div>
             }
             <div className={icon ? style.textdivicon : style.textdiv}>

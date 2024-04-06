@@ -5,7 +5,7 @@
     margin-left: 2.5%;
     margin-right: 2.5%;
     transition: 0.25s;
-    fill: rgba(91,171,80, 0.25)
+    fill: rgba(91,171,80, 0.25);
 }
 
 .icon2 {
@@ -20,5 +20,5 @@
 
 .icon:hover {
     transition: 0.25s;
-    fill: rgba(91,171,80, 0.5)
+    fill: rgba(91,171,80, 0.5);
 }

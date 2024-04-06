@@ -10,9 +10,17 @@
     padding: 0.5% 2% 0.5% 2%;
 }
 
-.cell:hover {
-    transition: 0.5s;
-    filter: brightness(75%);
+@media not (hover: none) {
+    .cell:hover {
+        transition: 0.5s;
+        filter: brightness(75%);
+    }
+}
+
+.cell:active {
+    transition: 0.1s;
+    transform: scale(0.95);
+    filter: brightness(50%);
 }
 
 .celldisable {

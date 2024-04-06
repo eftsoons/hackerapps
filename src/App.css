@@ -25,7 +25,9 @@ body {
 
 .listeng:active {
     transition: 0.1s;
-    transform: scale(0.95);
+    transform-style: preserve-3d;
+    transform: scale(0.95) rotateX(var(--move-x)) rotateY(var(--move-y));
+    will-change: transform;
 }
 
 @keyframes glow {
