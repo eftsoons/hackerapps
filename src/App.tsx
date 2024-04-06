@@ -39,6 +39,8 @@ function App() {
       settime(new Date());
     }, 500);
 
+    console.log(document)
+
     async function fetchData() {
       if (telegram.initDataUnsafe.user) {
         setuser({
