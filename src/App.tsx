@@ -194,7 +194,8 @@ function App() {
                 nextmenu("secretsuper", "secret")
                 telegram.HapticFeedback.notificationOccurred("error")
               }
-          }}><Money height='20vh' width='20vw' /></div>
+          }}>
+          <Money height='20vh' width='20vw' /></div>
           </Menu>
           <Menu id="stats">
             <StatsGame>
