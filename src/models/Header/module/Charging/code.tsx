@@ -8,7 +8,7 @@ const Charging = () => {
         <div><Signal /></div>
         <div><Signal /></div>
         <div><Battery /></div>
-        <div>69%</div>
+        <div>52%</div>
     </div>
 }
 

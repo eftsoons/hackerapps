@@ -6,6 +6,7 @@
     letter-spacing: 0.5px;
     font-size: 30px;
     user-select: none;
+    scrollbar-width: none
 }
 
 body {
@@ -78,6 +79,7 @@ body {
     align-items: center;
     justify-content: space-evenly;
     margin-bottom: 20px;
+    
 }
 
 .topplayer img {

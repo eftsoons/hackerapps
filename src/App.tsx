@@ -10,6 +10,9 @@ import {StatsTG, StatsVK, Stats} from "./models/StatsGame/module"
 
 import logo from "./img/500x500.png"
 import assembler from "./img/20181030112233_logoASM_new_kolko.png"
+import testduck from "./test.webp"
+import testduck2 from "./test2.webp"
+import testduck3 from "./test3.webp"
 
 import {Telegram, VK, Chart, Money, Cup, Computer, Mobile} from './svg'
 
@@ -112,8 +115,8 @@ function App() {
                   </div>
                 </div>
               </div>
-              <GroupCell>
-                Взломанные:
+              <div style={{textAlign: "center"}}>Взломанные:</div>
+              <GroupCell height='68%'>
                 <Cell 
                 icon="https://sun75-2.userapi.com/s/v1/if2/tITQ5bySaMd5DxzDvj_FK23vWG_rajznbafawMPVvo6AELi0oQY3j29GzheFfe7wcE9hoDeS6oA9da24OH1FPODB.jpg?quality=95&crop=63,0,1141,1141&as=50x50,100x100,200x200,400x400&ava=1&u=svMfBa0kU-GORlIDTaRG9V0N17oSXj-1PpUXnTjKLnQ&cs=200x200" 
                 righttext="+100$">
@@ -130,7 +133,7 @@ function App() {
           {/* <img style={{ width: "150px", height: "150px"}} src={VK} alt="Методы взлома и взлом" />
           методы взлома и взлом */}
           <Window>
-            <GroupCell>
+            <GroupCell height="100%">
               <Cell 
                 onClick={() => nextmenu("playassembler", "hack")} 
                 icon={assembler}
@@ -145,7 +148,7 @@ function App() {
               <Cell onClick={() => nextmenu("playparsing", "hack")} icon={Telegram}
               righttext="10 ссылок взлом"
               >Парсинг</Cell>
-              <Cell disable icon={Telegram}>Асемблерasd</Cell>
+              <Cell disable icon={Telegram}>Министерство Образования</Cell>
               <Cell disable icon={Telegram}>Асемблерasd</Cell>
               <Cell righttext='1000$'>Группа 123</Cell>
               <Cell righttext='1000$'>Группа 123</Cell>
@@ -170,7 +173,7 @@ function App() {
             <div className='topseperator' />
             <div className='topgroup'><img src={VK} alt=""/></div>
           </div>
-          <GroupCell>
+          <GroupCell height='75%'>
             <Cell righttext='1000$'>Группа 123</Cell>
             <Cell righttext='500$'>Игрок 123</Cell>
             <Cell righttext='150$'>Группа 321</Cell>
@@ -242,17 +245,35 @@ function App() {
               <Button href="https://t.me/shishkin666">Автор</Button>
             </ButtonGroup>
           </Menu>
-          <Menu style={{display: "flex", alignItems: "center", justifyContent: "center"}} id="secretsuper">
-            <img style={{borderRadius: "15px"}} width={250} src={logo} />
+          <Menu style={{display: "flex", justifyContent: "center",}} id="secretsuper">
+            <img style={{borderRadius: "15px", position: "absolute", top: "17.5%"}} width={250} src={logo} />
           </Menu>
-          <Menu style={{display: "flex", alignItems: "center", justifyContent: "center"}} id="playassembler">
+          <Menu id="playassembler" style={{textAlign: "center"}}>
+            <img style={{height: "100px"}} src={testduck2}></img>
+            <br />
             Миниигра Асемблер
+            <br />
+            Данная игра даст вам 2 ссылку для взлома, и рассказывает о способе связанном с обманом
+            <br />
+            <div style={{paddingLeft: "50px", paddingRight: "50px"}}><Button>Начать</Button></div>
           </Menu>
-          <Menu style={{display: "flex", alignItems: "center", justifyContent: "center"}} id="playnaeb">
+          <Menu id="playnaeb" style={{textAlign: "center"}}>
+            <img style={{height: "100px"}} src={testduck}></img>
+            <br />
             Миниигра Соц. инжерия
+            <br />
+            Данная игра даст вам 2 ссылку для взлома, и рассказывает о способе связанном с обманом
+            <br />
+            <div style={{paddingLeft: "50px", paddingRight: "50px"}}><Button>Начать</Button></div>
           </Menu>
-          <Menu style={{display: "flex", alignItems: "center", justifyContent: "center"}} id="playparsing">
+          <Menu style={{textAlign: "center"}} id="playparsing">
+            <img style={{height: "100px"}} src={testduck3}></img>
+            <br />
             Миниигра Парсинг
+            <br />
+            Данная игра даст вам 2 ссылку для взлома, и рассказывает о способе связанном с обманом
+            <br />
+            <div style={{paddingLeft: "50px", paddingRight: "50px"}}><Button onClick={() => {console.log(123)}}>Начать</Button></div>
           </Menu>
       </Main>
 
