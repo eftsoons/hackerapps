@@ -10,10 +10,7 @@ import {StatsTG, StatsVK, Stats} from "./models/StatsGame/module"
 
 import logo from "./img/500x500.png"
 import assembler from "./img/20181030112233_logoASM_new_kolko.png"
-import testduck from "./test.webp"
-import testduck2 from "./test2.webp"
-import testduck3 from "./test3.webp"
-
+import {DuckDoctorA, DuckSpy, DuckVar, DuckWhat} from './img'
 import {Telegram, VK, Chart, Money, Cup, Computer, Mobile} from './svg'
 
 import './App.css'
@@ -111,8 +108,10 @@ function App() {
                     {`${user.first_name} ${user.last_name}`}
                   </div>
                   <div className='statsusername2'>
-                    Взлома: 0 акков
+                    Топ 100
                   </div>
+                  Взлом: 1 пользователей
+              Доход: +100$
                 </div>
               </div>
               <div style={{textAlign: "center"}}>Взломанные:</div>
@@ -134,28 +133,24 @@ function App() {
           методы взлома и взлом */}
           <Window>
             <GroupCell height="100%">
+              <Cell onClick={() => nextmenu("playparsing", "hack")} icon={DuckDoctorA}
+              righttext="+1 взлом"
+              >Парсинг</Cell>
               <Cell 
                 onClick={() => nextmenu("playassembler", "hack")} 
-                icon={assembler}
-                righttext="1 ссылка взлом"
+                icon={DuckVar}
+                righttext="+? взлома"
+                disable
                 >
                 Асемблер
               </Cell>
               <Cell 
               onClick={() => nextmenu("playnaeb", "hack")}
-              righttext="5 ссылок взлом"
-              >Социальная инженерия</Cell>
-              <Cell onClick={() => nextmenu("playparsing", "hack")} icon={Telegram}
-              righttext="10 ссылок взлом"
-              >Парсинг</Cell>
-              <Cell disable icon={Telegram}>Министерство Образования</Cell>
-              <Cell disable icon={Telegram}>Асемблерasd</Cell>
-              <Cell righttext='1000$'>Группа 123</Cell>
-              <Cell righttext='1000$'>Группа 123</Cell>
-              <Cell righttext='1000$'>Группа 123</Cell>
-              <Cell righttext='1000$'>Группа 123</Cell>
-              <Cell righttext='1000$'>Группа 123</Cell>
-              <Cell righttext='1000$'>Группа 123</Cell>
+              icon={DuckSpy}
+              righttext="+? взлома"
+              disable
+              >Соц. инженерия</Cell>
+              <Cell icon={DuckWhat} disable>Министерство Образования</Cell>
               {/* onClick={() => telegram.openTelegramLink({path_full: "/hackerapps?startattach=send-assetCurrency__&choose=users"})} icon={Telegram} */}
             </GroupCell>
             {/* <br />
@@ -249,7 +244,7 @@ function App() {
             <img style={{borderRadius: "15px", position: "absolute", top: "17.5%"}} width={250} src={logo} />
           </Menu>
           <Menu id="playassembler" style={{textAlign: "center"}}>
-            <img style={{height: "100px"}} src={testduck2}></img>
+            <img style={{height: "100px"}} src={DuckVar}></img>
             <br />
             Миниигра Асемблер
             <br />
@@ -258,7 +253,7 @@ function App() {
             <div style={{paddingLeft: "50px", paddingRight: "50px"}}><Button>Начать</Button></div>
           </Menu>
           <Menu id="playnaeb" style={{textAlign: "center"}}>
-            <img style={{height: "100px"}} src={testduck}></img>
+            <img style={{height: "100px"}} src={DuckSpy}></img>
             <br />
             Миниигра Соц. инжерия
             <br />
@@ -267,7 +262,7 @@ function App() {
             <div style={{paddingLeft: "50px", paddingRight: "50px"}}><Button>Начать</Button></div>
           </Menu>
           <Menu style={{textAlign: "center"}} id="playparsing">
-            <img style={{height: "100px"}} src={testduck3}></img>
+            <img style={{height: "100px"}} src={DuckDoctorA}></img>
             <br />
             Миниигра Парсинг
             <br />

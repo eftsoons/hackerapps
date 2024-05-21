@@ -71,12 +71,6 @@
     margin-left: 10px;
 }
 
-.text {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-}
-
 .maintext {
     font-size: 0.75em;
 }
@@ -88,4 +82,7 @@
 .righttext {
     font-size: 20px;
     color: black;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }

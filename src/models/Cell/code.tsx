@@ -20,7 +20,7 @@ const Cell = ({children, icon, disable, onClick, righttext, bottomtext} : Cell) 
             </div>
             }
             <div className={icon ? style.textdivicon : style.textdiv}>
-                <div className={style.text}>
+                <div>
                     <div className={style.maintext}>
                         {children}
                     </div>

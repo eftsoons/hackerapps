@@ -1,0 +1,8 @@
+export {default as DuckDoctorA} from "./duckdoctora.png"
+export {default as DuckSpyA} from "./duckspya.png"
+export {default as DuckVarA} from "./duckvara.png"
+export {default as DuckWhatA} from "./duckwhata.png"
+export {default as DuckDoctor} from "./duckdoctor.png"
+export {default as DuckSpy} from "./duckspy.png"
+export {default as DuckVar} from "./duckvar.png"
+export {default as DuckWhat} from "./duckwhat.png"
