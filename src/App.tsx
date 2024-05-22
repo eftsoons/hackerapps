@@ -9,7 +9,6 @@ import {Times, Charging} from "./models/Header/module"
 import {StatsTG, StatsVK, Stats} from "./models/StatsGame/module"
 
 import logo from "./img/500x500.png"
-import assembler from "./img/20181030112233_logoASM_new_kolko.png"
 import {DuckDoctorA, DuckSpy, DuckVar, DuckWhat} from './img'
 import {Telegram, VK, Chart, Money, Cup, Computer, Mobile} from './svg'
 
