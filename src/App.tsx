@@ -27,6 +27,7 @@ function App() {
   useEffect(() => {
     telegram.ready();
     telegram.expand();
+    telegram.isClosingConfirmationEnabled = true;
 
     console.log(telegram.initDataUnsafe)
 
