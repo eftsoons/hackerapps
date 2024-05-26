@@ -1,6 +1,6 @@
 .cell {
-    min-height: 50px;
     width: 100%;
+    height: 14vh;
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -12,11 +12,12 @@
     filter: none;
     transform: scale(1);
     border: none;
-    color: white
+    color: white;
 }
 
 @media not (hover: none) {
     .cell:hover {
+        user-select: none;
         transition: 0.5s;
         filter: brightness(75%);
         border: none;
@@ -29,11 +30,12 @@
     transform: scale(0.95);
     filter: brightness(50%);
     border: none;
-    color: white
+    color: white;
+    user-select: none;
 }
 
 .celldisable {
-    min-height: 50px;
+    height: 14vh;
     width: 100%;
     display: flex;
     align-items: center;
