@@ -84,15 +84,15 @@
 }
 
 .maintext {
-    font-size: 70%;
+    font-size: 4vw;
 }
 
 .bottomtext {
-    font-size: 50%;
+    font-size: 3vw;
 }
 
 .righttext {
-    font-size: 70%;
+    font-size: 4vw;
     color: white;
     text-overflow: ellipsis;
     white-space: nowrap;
