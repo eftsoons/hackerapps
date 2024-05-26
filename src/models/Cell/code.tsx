@@ -13,7 +13,7 @@ interface Cell {
 
 const Cell = ({children, icon, disable, onClick, righttext, bottomtext} : Cell) => {
     return (
-        <div onClick={() => !disable && onClick && onClick()} className={disable ? style.celldisable : style.cell}>
+        <button onClick={() => !disable && onClick && onClick()} className={disable ? style.celldisable : style.cell}>
             {icon &&
             <div className={style.icongroup}>
                 <img loading="lazy" className={style.image} src={icon} alt="" />
@@ -30,7 +30,7 @@ const Cell = ({children, icon, disable, onClick, righttext, bottomtext} : Cell) 
                 </div>
                 <span className={style.righttext}>{righttext}</span>
             </div>
-        </div> 
+        </button> 
     )
 }
 

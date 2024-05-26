@@ -1,9 +1,9 @@
-import style from "./style.module.css"
+import style2 from "./style.module.css"
 
 import { Node } from "../../Props"
 
-const Window = ({children}: Node) => {
-    return <div className={style.window}>{children}</div>
+const Window = ({children, style}: Node) => {
+    return <div className={style2.window} style={style}>{children}</div>
 }
 
 export default Window

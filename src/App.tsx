@@ -100,9 +100,35 @@ function App() {
             <Window>
               {/* <img style={{width: "50px"}} src={telegram.initDataUnsafe.user.photo_url} alt="" /> */}
               {/* Тут история вашего взлома, ваши взломанные пользователи, количество монет, ваш ранг, ваше фото + ФИО + доступные ссылки взлома */}
+              <div style={{marginBottom: "10px"}}>
               <div className='stats'>
-                <img src="https://sun75-2.userapi.com/s/v1/if2/tITQ5bySaMd5DxzDvj_FK23vWG_rajznbafawMPVvo6AELi0oQY3j29GzheFfe7wcE9hoDeS6oA9da24OH1FPODB.jpg?quality=95&crop=63,0,1141,1141&as=50x50,100x100,200x200,400x400&ava=1&u=svMfBa0kU-GORlIDTaRG9V0N17oSXj-1PpUXnTjKLnQ&cs=200x200" alt="" />
-                <div>
+                {//<img src="https://sun75-2.userapi.com/s/v1/if2/tITQ5bySaMd5DxzDvj_FK23vWG_rajznbafawMPVvo6AELi0oQY3j29GzheFfe7wcE9hoDeS6oA9da24OH1FPODB.jpg?quality=95&crop=63,0,1141,1141&as=50x50,100x100,200x200,400x400&ava=1&u=svMfBa0kU-GORlIDTaRG9V0N17oSXj-1PpUXnTjKLnQ&cs=200x200" alt="" />
+                }
+                <div style={{width: "33%"}}>
+                  <span style={{fontSize: "10px"}}>Монет: 1.000.000 hackercoin</span>
+                  <br />
+                  <span style={{fontSize: "10px"}}>Взломано: 500 пользователей</span>
+                </div>
+                <div className='horizontallyseperator' />
+                
+                <div style={{textAlign: "center", width: "33%"}}>
+                  <img style={{borderRadius: "999px", marginBottom: "10px"}} className='divimage' src={logo} />
+                  <div style={{marginTop: "-30px"}}>
+                    <span style={{fontSize: "0.4rem"}}>{user.first_name}</span>
+                  </div>
+                  <div style={{marginTop: "-15px"}}>
+                    <span style={{fontSize: "0.5rem"}}>Топ 100</span>
+                </div>
+
+                </div>
+               <div className='horizontallyseperator' />
+               
+                <div style={{width: "33%", textAlign: "center"}}>
+                  <span style={{fontSize: "10px"}}>Ваш взломщик: @shishkin666</span>
+                  <br />
+                  <span style={{fontSize: "10px"}}>Дата взлома: 05.12.2006</span>
+                </div>
+                {/*<div>
                   <div className='statsusername'>
                     {`${user.first_name} ${user.last_name}`}
                   </div>
@@ -110,11 +136,13 @@ function App() {
                     Топ 100
                   </div>
                   Взлом: 1 пользователей
-              Доход: +100$
-                </div>
+                  Доход: +100$
+              </div>*/}
               </div>
-              <div style={{textAlign: "center"}}>Взломанные:</div>
-              <GroupCell height='68%'>
+              <div className='verticalyseperator' />
+                
+              </div>
+              <GroupCell height='65%'>
                 <Cell 
                 icon="https://sun75-2.userapi.com/s/v1/if2/tITQ5bySaMd5DxzDvj_FK23vWG_rajznbafawMPVvo6AELi0oQY3j29GzheFfe7wcE9hoDeS6oA9da24OH1FPODB.jpg?quality=95&crop=63,0,1141,1141&as=50x50,100x100,200x200,400x400&ava=1&u=svMfBa0kU-GORlIDTaRG9V0N17oSXj-1PpUXnTjKLnQ&cs=200x200" 
                 righttext="+100$">
@@ -131,7 +159,7 @@ function App() {
           {/* <img style={{ width: "150px", height: "150px"}} src={VK} alt="Методы взлома и взлом" />
           методы взлома и взлом */}
           <Window>
-            <GroupCell height="100%">
+            <GroupCell height="85%">
               <Cell onClick={() => nextmenu("playparsing", "hack")} icon={DuckDoctorA}
               righttext="+1 взлом"
               >Парсинг</Cell>
@@ -149,7 +177,7 @@ function App() {
               righttext="+? взлома"
               disable
               >Соц. инженерия</Cell>
-              <Cell icon={DuckWhat} disable>Министерство Образования</Cell>
+              <Cell righttext='+? взлома' icon={DuckWhat} disable>Министерство Образования</Cell>
               {/* onClick={() => telegram.openTelegramLink({path_full: "/hackerapps?startattach=send-assetCurrency__&choose=users"})} icon={Telegram} */}
             </GroupCell>
             {/* <br />
@@ -157,6 +185,7 @@ function App() {
             <br />
             Парсинг 
             <br /> */}
+            <Button>Ссылка для взлома</Button>
           </Window>
           {/* <Button href="https://t.me/share/url?url=t.me/botname/app?startapp=something&text=something">asd</Button> */}
           </Menu>
@@ -164,7 +193,7 @@ function App() {
             <Window>
           <div className='top'>
             <div className='topplayer'><img src={Telegram} alt=""/></div>
-            <div className='topseperator' />
+            <div className='horizontallyseperator' />
             <div className='topgroup'><img src={VK} alt=""/></div>
           </div>
           <GroupCell height='75%'>
@@ -272,21 +301,21 @@ function App() {
       </Main>
 
       <Bottom activemenu={activemenu} setactive={setactivemenu}>
-      <Icon id="profile">
-        <Mobile />
-      </Icon>
-      <Icon id="hack">
-        <Computer />
-      </Icon>
-      <Icon id="top">
-        <Cup />
-      </Icon>
-      <Icon id="secret">
-        <Money />
-      </Icon>
-      <Icon id="stats">
-        <Chart />
-      </Icon>
+        <Icon id="profile">
+          <Mobile />
+        </Icon>
+        <Icon id="hack">
+          <Computer />
+        </Icon>
+        <Icon id="top">
+          <Cup />
+        </Icon>
+        <Icon id="secret">
+          <Money />
+        </Icon>
+        <Icon id="stats">
+          <Chart />
+        </Icon>
       </Bottom>
     </>
   )

@@ -1,5 +1,6 @@
 .cell {
     min-height: 50px;
+    width: 100%;
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -9,13 +10,17 @@
     padding: 0.5% 2% 0.5% 2%;
     transition: 0.5s;
     filter: none;
-    transform: scale(1)
+    transform: scale(1);
+    border: none;
+    color: white
 }
 
 @media not (hover: none) {
     .cell:hover {
         transition: 0.5s;
         filter: brightness(75%);
+        border: none;
+        color: white
     }
 }
 
@@ -23,10 +28,13 @@
     transition: 0.1s;
     transform: scale(0.95);
     filter: brightness(50%);
+    border: none;
+    color: white
 }
 
 .celldisable {
     min-height: 50px;
+    width: 100%;
     display: flex;
     align-items: center;
     border-radius: 15px;
@@ -34,6 +42,8 @@
     filter: brightness(50%);
     user-select: none;
     padding: 0.5% 1% 0.5% 1%;
+    border: none;
+    color: white
 }
 
 .image {
@@ -81,7 +91,7 @@
 
 .righttext {
     font-size: 20px;
-    color: black;
+    color: white;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
