@@ -1,14 +1,14 @@
 .window {
     /* height: 80vh; */
-    height: 76vh;
+    height: 90%;
     background-color: rgba(117, 117, 117, 0.25);
     border-radius: 15px;
     margin: 1%;
     padding: 1%;
 }
 
-@media (min-width: 600px) {
+/*@media (min-width: 600px) {
     .window {
-        height: 85vh;  
+        height: 90%;  
     }
-}
+}*/

@@ -51,6 +51,7 @@
 .image {
     width: 100%;
     border-radius: 30px;
+    user-select: none;
 }
 
 .icongroup {
@@ -58,6 +59,7 @@
     display: flex;
     align-items: center;
     width: 10%;
+    user-select: none;
 }
 
 .seperator {
@@ -65,6 +67,7 @@
     height: 9vh;
     border-radius: 15px;
     width: 0.5vw;
+    user-select: none;
 }
 
 .textdivicon {
@@ -73,6 +76,7 @@
     justify-content: space-between;
     width: 90%;
     margin-left: 2%;
+    user-select: none;
 }
 
 .textdiv {
@@ -81,14 +85,17 @@
     justify-content: space-between;
     width: 100%;
     margin-left: 2%;
+    user-select: none;
 }
 
 .maintext {
     font-size: 4vw;
+    user-select: none;
 }
 
 .bottomtext {
     font-size: 3vw;
+    user-select: none;
 }
 
 .righttext {
@@ -97,4 +104,5 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+    user-select: none;
 }

@@ -50,10 +50,11 @@ function App() {
 
     async function fetchData() {
       if (telegram.initDataUnsafe.user) {
+        console.log(telegram.initDataUnsafe.user)
         setuser({
           first_name: telegram.initDataUnsafe.user.first_name, 
           last_name: telegram.initDataUnsafe.user.last_name,
-          photo: "https://sun75-2.userapi.com/s/v1/if2/tITQ5bySaMd5DxzDvj_FK23vWG_rajznbafawMPVvo6AELi0oQY3j29GzheFfe7wcE9hoDeS6oA9da24OH1FPODB.jpg?quality=95&crop=63,0,1141,1141&as=50x50,100x100,200x200,400x400&ava=1&u=svMfBa0kU-GORlIDTaRG9V0N17oSXj-1PpUXnTjKLnQ&cs=200x200"
+          photo: logo
         })
       } else {
         const user = await bridge.send("VKWebAppGetUserInfo");
@@ -114,15 +115,22 @@ function App() {
               <div className='stats'>
                 {//<img src="https://sun75-2.userapi.com/s/v1/if2/tITQ5bySaMd5DxzDvj_FK23vWG_rajznbafawMPVvo6AELi0oQY3j29GzheFfe7wcE9hoDeS6oA9da24OH1FPODB.jpg?quality=95&crop=63,0,1141,1141&as=50x50,100x100,200x200,400x400&ava=1&u=svMfBa0kU-GORlIDTaRG9V0N17oSXj-1PpUXnTjKLnQ&cs=200x200" alt="" />
                 }
-                <div style={{width: "33%"}}>
-                  <span style={{fontSize: "2vw"}}>Монет: 1.000.000 hackercoin</span>
-                  <br />
-                  <span style={{fontSize: "2vw"}}>Взломано: 500 пользователей</span>
+                <div style={{width: "40%", textAlign: "center"}}>
+                  <div style={{height: "33%", display: "flex", justifyContent: "center", alignItems: "center"}}>
+                    <span style={{fontSize: "2.5vw", whiteSpace: "nowrap"}}>Ваши успехи:</span>
+                  </div>
+                  <div style={{height: "33%", display: "flex", justifyContent: "center", alignItems: "center"}}>
+                    <span style={{fontSize: "3vw", whiteSpace: "nowrap"}}>1.000.000 hackercoin</span>
+                  </div>
+                  <div style={{height: "33%", display: "flex", justifyContent: "center", alignItems: "center"}}>
+                    <span style={{fontSize: "3vw", whiteSpace: "nowrap"}}>500 👨🏻‍💻</span>
+                  </div>
+
                 </div>
                 <div className='horizontallyseperator' />
                 
-                <div style={{textAlign: "center", width: "33%"}}>
-                  <img style={{borderRadius: "999px", marginBottom: "10px"}} className='divimage' src={logo} />
+                <div style={{textAlign: "center", width: "20%"}}>
+                  <img style={{borderRadius: "999px", marginBottom: "10px"}} className='divimage' src={user.photo} />
                   <div style={{marginTop: "-30px"}}>
                     <span style={{fontSize: "2vw"}}>{user.first_name}</span>
                   </div>
@@ -133,10 +141,16 @@ function App() {
                 </div>
                <div className='horizontallyseperator' />
                
-                <div style={{width: "33%", textAlign: "center"}}>
-                  <span style={{fontSize: "2vw"}}>Ваш взломщик: @shishkin666</span>
-                  <br />
-                  <span style={{fontSize: "2vw"}}>Дата взлома: 05.12.2006</span>
+                <div style={{width: "40%"}}>
+                  <div style={{height: "33%", display: "flex", justifyContent: "center", alignItems: "center"}}>
+                    <span style={{fontSize: "2.5vw", whiteSpace: "nowrap"}}>Данные о вашем взломе:</span>
+                  </div>
+                  <div style={{height: "33%", display: "flex", justifyContent: "center", alignItems: "center"}}>
+                    <span style={{fontSize: "3vw", whiteSpace: "nowrap"}}>@shishkin666 🐱‍👤</span>
+                  </div>
+                  <div style={{height: "33%", display: "flex", justifyContent: "center", alignItems: "center"}}>
+                    <span style={{fontSize: "3vw", whiteSpace: "nowrap"}}>05.12.2006 📅</span>
+                  </div>
                 </div>
                 {/*<div>
                   <div className='statsusername'>
