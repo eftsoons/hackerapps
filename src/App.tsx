@@ -46,6 +46,8 @@ function App() {
       settime(new Date());
     }, 500);
 
+    settopuser({user: [{name: "user 1", money: "100"}, {name: "user 2", money: "100"}, {name: "user 3", money: "100"}], group: [{name: "group 1", money: "100"}, {name: "group 2", money: "100"}, {name: "group 3", money: "100"}]})
+
     async function fetchData() {
       if (telegram.initDataUnsafe.user) {
         setuser({
