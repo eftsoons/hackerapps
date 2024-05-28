@@ -6,7 +6,9 @@
     letter-spacing: 0.5px;
     font-size: 30px;
     user-select: none;
-    scrollbar-width: none
+    scrollbar-width: none;
+    -webkit-user-select: none;
+    touch-action: none;
 }
 
 body {
