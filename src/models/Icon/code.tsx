@@ -9,17 +9,18 @@ interface Icon {
     children: ReactNode;
     active?: string;
     setactive?: Function
+    noanim?: Boolean
 }
 
-const Icon = ({ id, children, active, setactive }: Icon) => {
+const Icon = ({ id, children, active, setactive, noanim }: Icon) => {
   return (
     <Fragment>
         {setactive ? 
-        <div onClick={() => {setactive(id); telegram.BackButton.hide()}} className={id == active ? style.icon2 : style.icon}>
+        <div id={noanim && style.noanim} onClick={() => {setactive(id); telegram.BackButton.hide()}} className={id == active ? style.icon2 : style.icon}>
             {children}
         </div> 
     : 
-        <div className={style.icon}>
+        <div id={noanim && style.noanim} className={style.icon}>
             {children}
         </div>}
     </Fragment>

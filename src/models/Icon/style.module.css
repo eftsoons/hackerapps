@@ -2,10 +2,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 2.5%;
-    margin-right: 2.5%;
     transition: 0.25s;
     fill: rgba(91,171,80, 0.25);
+    margin-left: 2.5%;
+    margin-right: 2.5%;
 }
 
 .icon2 {
@@ -21,4 +21,8 @@
 .icon:hover {
     transition: 0.25s;
     fill: rgba(91,171,80, 0.5);
+}
+
+#noanim {
+    margin: 0
 }

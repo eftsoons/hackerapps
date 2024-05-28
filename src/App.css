@@ -73,24 +73,19 @@ body {
 }
 
 .top {
-    background-color: red;
     display: flex;
     border-radius: 15px;
-    height: 20%;
+    height: 25%;
     align-items: center;
     justify-content: space-evenly;
-    margin-bottom: 20px;
-    
 }
 
-.topplayer img {
-    width: 100px;
-    height: 100px;
+.topplayer {
+    fill: rgb(91,171,80);
 }
 
-.topgroup img {
-    width: 100px;
-    height: 100px;
+.topgroup {
+    fill: rgb(91,171,80);
 }
 
 .horizontallyseperator {

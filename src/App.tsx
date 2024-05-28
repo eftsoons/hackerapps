@@ -10,12 +10,18 @@ import {StatsTG, StatsVK, Stats} from "./models/StatsGame/module"
 
 import logo from "./img/500x500.png"
 import {DuckDoctorA, DuckSpy, DuckVar, DuckWhat} from './img'
-import {Telegram, VK, Chart, Money, Cup, Computer, Mobile} from './svg'
+import {Telegram, VK, Chart, Money, Cup, Computer, Mobile, Group, User} from './svg'
 
 import './App.css'
 
 // @ts-expect-error
 const telegram = window.Telegram.WebApp;
+
+interface topplayer {
+  user: {name: string, money: string}[]
+  group: {name: string, money: string}[]
+  [key: string]: any; // Сигнатура индекса для доступа по строковому ключу
+}
 
 function App() {
   //const [count, setCount] = useState(null)
@@ -23,12 +29,13 @@ function App() {
   const [click, setclick] = useState(0)
   const [activemenu, setactivemenu] = useState("profile")
   const [user, setuser] = useState({first_name: "Александр", last_name: "Федорович", photo: "asd"})
+  const [activetopmenu, setactivetopmenu] = useState<string>("user")
+  const [topuser, settopuser] = useState<topplayer>({user: [{name: "user 1", money: "100"}, {name: "user 2", money: "100"}, {name: "user 3", money: "100"}], group: [{name: "group 1", money: "100"}, {name: "group 2", money: "100"}, {name: "group 3", money: "100"}]})
   
   useEffect(() => {
     telegram.ready();
     telegram.expand();
-    telegram.isClosingConfirmationEnabled = true;
-
+    
     console.log(telegram.initDataUnsafe)
 
     telegram.BackButton.onClick(() => {telegram.BackButton.hide(); setactivemenu("profile")})
@@ -101,33 +108,33 @@ function App() {
             <Window>
               {/* <img style={{width: "50px"}} src={telegram.initDataUnsafe.user.photo_url} alt="" /> */}
               {/* Тут история вашего взлома, ваши взломанные пользователи, количество монет, ваш ранг, ваше фото + ФИО + доступные ссылки взлома */}
-              <div style={{marginBottom: "10px"}}>
+              <div style={{marginBottom: "2vw"}}>
               <div className='stats'>
                 {//<img src="https://sun75-2.userapi.com/s/v1/if2/tITQ5bySaMd5DxzDvj_FK23vWG_rajznbafawMPVvo6AELi0oQY3j29GzheFfe7wcE9hoDeS6oA9da24OH1FPODB.jpg?quality=95&crop=63,0,1141,1141&as=50x50,100x100,200x200,400x400&ava=1&u=svMfBa0kU-GORlIDTaRG9V0N17oSXj-1PpUXnTjKLnQ&cs=200x200" alt="" />
                 }
                 <div style={{width: "33%"}}>
-                  <span style={{fontSize: "10px"}}>Монет: 1.000.000 hackercoin</span>
+                  <span style={{fontSize: "2vw"}}>Монет: 1.000.000 hackercoin</span>
                   <br />
-                  <span style={{fontSize: "10px"}}>Взломано: 500 пользователей</span>
+                  <span style={{fontSize: "2vw"}}>Взломано: 500 пользователей</span>
                 </div>
                 <div className='horizontallyseperator' />
                 
                 <div style={{textAlign: "center", width: "33%"}}>
                   <img style={{borderRadius: "999px", marginBottom: "10px"}} className='divimage' src={logo} />
                   <div style={{marginTop: "-30px"}}>
-                    <span style={{fontSize: "0.4rem"}}>{user.first_name}</span>
+                    <span style={{fontSize: "2vw"}}>{user.first_name}</span>
                   </div>
                   <div style={{marginTop: "-15px"}}>
-                    <span style={{fontSize: "0.5rem"}}>Топ 100</span>
+                    <span style={{fontSize: "2vw"}}>Топ 100</span>
                 </div>
 
                 </div>
                <div className='horizontallyseperator' />
                
                 <div style={{width: "33%", textAlign: "center"}}>
-                  <span style={{fontSize: "10px"}}>Ваш взломщик: @shishkin666</span>
+                  <span style={{fontSize: "2vw"}}>Ваш взломщик: @shishkin666</span>
                   <br />
-                  <span style={{fontSize: "10px"}}>Дата взлома: 05.12.2006</span>
+                  <span style={{fontSize: "2vw"}}>Дата взлома: 05.12.2006</span>
                 </div>
                 {/*<div>
                   <div className='statsusername'>
@@ -193,39 +200,39 @@ function App() {
           <Menu id="top">
             <Window>
           <div className='top'>
-            <div className='topplayer'><img src={Telegram} alt=""/></div>
+            <Icon noanim={true} active={activetopmenu} setactive={setactivetopmenu} id="user">
+              <User />
+            </Icon>
             <div className='horizontallyseperator' />
-            <div className='topgroup'><img src={VK} alt=""/></div>
+            <Icon noanim={true} active={activetopmenu} setactive={setactivetopmenu} id="group">
+              <Group />
+            </Icon>
           </div>
-          <GroupCell height='75%'>
-            <Cell righttext='1000$'>Группа 123</Cell>
-            <Cell righttext='500$'>Игрок 123</Cell>
-            <Cell righttext='150$'>Группа 321</Cell>
-            <Cell righttext='50$'>Игрок 321</Cell>
-            <Cell righttext='50$'>Игрок 321</Cell>
-            <Cell righttext='50$'>Игрок 321</Cell>
-            <Cell righttext='50$'>Игрок 321</Cell>
-            <Cell righttext='50$'>Игрок 321</Cell>
-            <Cell righttext='50$'>Игрок 321</Cell>
+          <div style={{marginBottom: "2vh"}} className='verticalyseperator' />
+          <GroupCell height='70%'>
+            {topuser[activetopmenu].map((info: {name: string, money: string}) => {
+              return <Cell righttext={info["money"]}>{info["name"]}</Cell>
+            })}
           </GroupCell>
           </Window>
           </Menu>
           <Menu style={{display: "flex", alignItems: "center", justifyContent: "center"}} id="secret">
             {/* what?listeng? */}
             <div className="listeng" onClick={() => {
-              if (click < 40) {
-                setclick(click + 1); 
-                telegram.HapticFeedback.notificationOccurred("warning")
-              } else {
-                setclick(0);
-                nextmenu("secretsuper", "secret")
-                telegram.HapticFeedback.notificationOccurred("error")
-              }
-          }}>
-          <Money height='20vh' width='20vw' />
+                  if (click < 40) {
+                    setclick(click + 1); 
+                    telegram.HapticFeedback.notificationOccurred("warning")
+                  } else {
+                    setclick(0);
+                    nextmenu("secretsuper", "secret")
+                    telegram.HapticFeedback.notificationOccurred("error")
+                  }
+              }}>
+              <Money height='20vh' width='20vw' />
             </div>
           </Menu>
           <Menu id="stats">
+            <Window>
             <StatsGame>
               <StatsTG>
               {/* <img style={{position: "absolute", top: "7%", left: "0" , width: "50px", height: "50px", userSelect: "none"}} src={Telegram} alt="" /> */}
@@ -266,8 +273,8 @@ function App() {
             <ButtonGroup>
               <Button href="https://t.me/HackerCoinChannel">Telegram канал</Button>
               <Button href="https://vk.com/hackercoinplay">VK группа</Button>
-              <Button href="https://t.me/shishkin666">Автор</Button>
             </ButtonGroup>
+            </Window>
           </Menu>
           <Menu style={{display: "flex", justifyContent: "center",}} id="secretsuper">
             <img style={{borderRadius: "15px", position: "absolute", top: "17.5%"}} width={250} src={logo} />
