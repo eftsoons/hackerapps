@@ -105,7 +105,6 @@ function App() {
               Текст механики взлома
             </Button> */}
 
-
       <Main activemenu={activemenu}>
           <Menu id="profile">
             <Window>
