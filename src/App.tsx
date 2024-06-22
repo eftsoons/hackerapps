@@ -318,8 +318,8 @@ function App() {
             </ButtonGroup>
             </Window>
           </Menu>
-          <Menu style={{display: "flex", justifyContent: "center",}} id="secretsuper">
-            <img style={{borderRadius: "15px", position: "absolute", top: "17.5%"}} width={250} src={logo} />
+          <Menu style={{display: "flex", alignItems: "center", justifyContent: "center"}} id="secretsuper">
+            <img style={{borderRadius: "15px"}} width={250} src={logo} />
           </Menu>
           <Menu id="playassembler" style={{textAlign: "center"}}>
             <img style={{height: "100px"}} src={DuckVar}></img>
