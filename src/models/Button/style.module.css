@@ -14,21 +14,25 @@
     cursor: pointer;
     transition: 0.5s;
     background-color: var(--tg-theme-button-color, #4bb34b);
+    -webkit-user-select: none
 }
 
 a {
     text-decoration: none;
     user-select: none;
+    -webkit-user-select: none
 }
 
 .button:hover {
     transition: 0.5s;
     background-color: var(--tg-theme-hint-color, #aaaaaa);
     user-select: none;
+    -webkit-user-select: none
 }
 
 .button:active, .buttonandroid:active {
     transition: none;
     background-color: var(--tg-theme-secondary-bg-color, #181818);
     user-select: none;
+    -webkit-user-select: none
 }
