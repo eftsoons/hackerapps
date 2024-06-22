@@ -6,7 +6,8 @@
     letter-spacing: 0.5px;
     font-size: 30px;
     scrollbar-width: none;
-    user-select: none !important;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0) /*АВХВАХВАХВА СПИЗДИЛ У HAMSTER COMBAT, РОТ ЕБАЛ ВАШ*/
 }
 
 body {
