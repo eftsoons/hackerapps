@@ -7,8 +7,8 @@ import {Node} from "../../Props"
 const GroupCell = ({children, height} : Node) => {
     return (
         <div style={{height: height}} className={style.groupmain}>
-            {Children.toArray(children).map((children) => (
-            <Fragment>
+            {Children.toArray(children).map((children, key) => (
+            <Fragment key={key}>
                 {/* {index != 0 && <div className={style.seperator} />} */}
                 <div className={style.groupcell}>
                     {children}

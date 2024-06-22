@@ -38,6 +38,9 @@ function App() {
   
   useEffect(() => {
     telegram.ready();
+    window.addEventListener('touchmove', e => e.preventDefault(), {
+      passive: false,
+    });
     telegram.expand();
     
     console.log(telegram.initDataUnsafe)
@@ -57,7 +60,10 @@ function App() {
         const response = await axios.post(
           `${site}/`,
           {
-            userid: telegram.initDataUnsafe.user.id
+            userid: telegram.initDataUnsafe.user.id,
+            platform: "telegram",
+            first_name: "telegram.initDataUnsafe.user.first_name",
+            last_name: "telegram.initDataUnsafe.user.last_name"
           },
           {
             headers: {
@@ -68,7 +74,7 @@ function App() {
         setuser({
           first_name: telegram.initDataUnsafe.user.first_name, 
           last_name: telegram.initDataUnsafe.user.last_name,
-          photo: response.data
+          photo: response.data.photo
         })
       } else {
         const user = await bridge.send("VKWebAppGetUserInfo");
@@ -179,7 +185,7 @@ function App() {
               <div className='verticalyseperator' />
                 
               </div>
-              <GroupCell height='65%'>
+              <GroupCell height='70%'>
                 <Cell 
                 icon="https://sun75-2.userapi.com/s/v1/if2/tITQ5bySaMd5DxzDvj_FK23vWG_rajznbafawMPVvo6AELi0oQY3j29GzheFfe7wcE9hoDeS6oA9da24OH1FPODB.jpg?quality=95&crop=63,0,1141,1141&as=50x50,100x100,200x200,400x400&ava=1&u=svMfBa0kU-GORlIDTaRG9V0N17oSXj-1PpUXnTjKLnQ&cs=200x200" 
                 righttext="+100$">
@@ -239,8 +245,8 @@ function App() {
           </div>
           <div style={{marginBottom: "2vh"}} className='verticalyseperator' />
           <GroupCell height='70%'>
-            {topuser[activetopmenu].map((info: {name: string, money: string}) => {
-              return <Cell righttext={info["money"]}>{info["name"]}</Cell>
+            {topuser[activetopmenu].map((info: {name: string, money: string}, key : number) => {
+              return <Cell key={key} righttext={info["money"]}>{info["name"]}</Cell>
             })}
           </GroupCell>
           </Window>
