@@ -41,6 +41,11 @@ function App() {
     window.addEventListener('touchmove', e => e.preventDefault(), {
       passive: false,
     });
+    window.ontouchstart = function(e) {
+      e.preventDefault();
+    }
+
+
     telegram.expand();
     
     console.log(telegram.initDataUnsafe)
