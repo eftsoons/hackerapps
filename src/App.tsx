@@ -41,10 +41,10 @@ function App() {
     window.addEventListener('touchmove', e => e.preventDefault(), {
       passive: false,
     });
-    window.ontouchstart = function(e) {
-      e.preventDefault();
-    }
 
+    window.addEventListener('touchstart', e => e.preventDefault(), {
+      passive: false,
+    });
 
     telegram.expand();
     
