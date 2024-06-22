@@ -9,6 +9,7 @@
 
 .buttongroup2 {
     width: 95%;
+    user-select: none;
 }
 
 .buttongroup3 {
@@ -16,4 +17,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    user-select: none;
+
 }
