@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
 
+import axios from "axios"
+
 import bridge from "@vkontakte/vk-bridge"
 
 // import Chart from 'chart.js/auto';
@@ -16,6 +18,8 @@ import './App.css'
 
 // @ts-expect-error
 const telegram = window.Telegram.WebApp;
+
+const site = "http://localhost:600"
 
 interface topplayer {
   user: {name: string, money: string}[]
@@ -50,11 +54,21 @@ function App() {
 
     async function fetchData() {
       if (telegram.initDataUnsafe.user) {
-        console.log(telegram.initDataUnsafe.user)
+        const response = await axios.post(
+          `${site}/`,
+          {
+            userid: telegram.initDataUnsafe.user.id
+          },
+          {
+            headers: {
+              "Content-type": "application/json; charset=UTF-8",
+            },
+          }
+        );
         setuser({
           first_name: telegram.initDataUnsafe.user.first_name, 
           last_name: telegram.initDataUnsafe.user.last_name,
-          photo: logo
+          photo: response.data
         })
       } else {
         const user = await bridge.send("VKWebAppGetUserInfo");
