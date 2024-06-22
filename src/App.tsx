@@ -42,10 +42,12 @@ function App() {
       passive: false,
     });
 
-    window.addEventListener('touchstart', e => e.preventDefault(), {
-      passive: false,
+    window.addEventListener('mousedown', (e) => {
+      e.preventDefault()
+      console.log(123)
     });
-
+    
+    
     telegram.expand();
     
     console.log(telegram.initDataUnsafe)

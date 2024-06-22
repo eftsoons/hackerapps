@@ -4,12 +4,10 @@
     background-color: rgba(117, 117, 117, 0.25);
     display: flex;
     justify-content: center;
-    user-select: none;
 }
 
 .buttongroup2 {
     width: 95%;
-    user-select: none;
 }
 
 .buttongroup3 {
@@ -17,6 +15,4 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    user-select: none;
-
 }
