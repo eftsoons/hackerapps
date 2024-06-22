@@ -23,12 +23,12 @@ a {
 
 .button:hover {
     transition: 0.5s;
-    background-color: var(--tg-theme-hint-color);
+    background-color: var(--tg-theme-hint-color, #aaaaaa);
     user-select: none;
 }
 
 .button:active, .buttonandroid:active {
     transition: none;
-    background-color: var(--tg-theme-secondary-bg-color);
+    background-color: var(--tg-theme-secondary-bg-color, #181818);
     user-select: none;
 }

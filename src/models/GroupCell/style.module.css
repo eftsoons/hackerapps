@@ -10,9 +10,11 @@
 
 .groupcell {
     margin-bottom: 5px;
+    user-select: none;
 }
 
 .groupmain {
     overflow-y: scroll;
     border-radius: 15px;
+    user-select: none;
 }

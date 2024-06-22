@@ -74,14 +74,14 @@ function App() {
         setuser({
           first_name: telegram.initDataUnsafe.user.first_name, 
           last_name: telegram.initDataUnsafe.user.last_name,
-          photo: response.data.photo
+          photo: response.data.photo ? response.data.photo : logo
         })
       } else {
         const user = await bridge.send("VKWebAppGetUserInfo");
         setuser({
           first_name: user.first_name, 
           last_name: user.last_name,
-          photo: "asd"
+          photo: logo
         })
       }
     }
@@ -185,7 +185,7 @@ function App() {
               <div className='verticalyseperator' />
                 
               </div>
-              <GroupCell height='70%'>
+              <GroupCell height='72%'>
                 <Cell 
                 icon="https://sun75-2.userapi.com/s/v1/if2/tITQ5bySaMd5DxzDvj_FK23vWG_rajznbafawMPVvo6AELi0oQY3j29GzheFfe7wcE9hoDeS6oA9da24OH1FPODB.jpg?quality=95&crop=63,0,1141,1141&as=50x50,100x100,200x200,400x400&ava=1&u=svMfBa0kU-GORlIDTaRG9V0N17oSXj-1PpUXnTjKLnQ&cs=200x200" 
                 righttext="+100$">
