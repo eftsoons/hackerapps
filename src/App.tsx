@@ -27,12 +27,22 @@ interface topplayer {
   [key: string]: any; // Сигнатура индекса для доступа по строковому ключу
 }
 
+interface user {
+  userid: number
+  first_name: string
+  last_name: string
+  photo: string
+  money: number
+  hacklist: []
+  hacksite: []
+}
+
 function App() {
   //const [count, setCount] = useState(null)
   const [time, settime] = useState<Date>(new Date())
   const [click, setclick] = useState(0)
   const [activemenu, setactivemenu] = useState("profile")
-  const [user, setuser] = useState({first_name: "Александр", last_name: "Федорович", photo: "asd"})
+  const [user, setuser] = useState<user>()
   const [activetopmenu, setactivetopmenu] = useState<string>("user")
   const [topuser, settopuser] = useState<topplayer>({user: [{name: "user 1", money: "100"}, {name: "user 2", money: "100"}, {name: "user 3", money: "100"}], group: [{name: "group 1", money: "100"}, {name: "group 2", money: "100"}, {name: "group 3", money: "100"}]})
   
@@ -40,13 +50,7 @@ function App() {
     telegram.ready();
     window.addEventListener('touchmove', e => e.preventDefault(), {
       passive: false,
-    });
-
-    window.addEventListener('mousedown', (e) => {
-      e.preventDefault()
-      console.log(123)
-    });
-    
+    });    
     
     telegram.expand();
     
@@ -69,8 +73,6 @@ function App() {
           {
             userid: telegram.initDataUnsafe.user.id,
             platform: "telegram",
-            first_name: "telegram.initDataUnsafe.user.first_name",
-            last_name: "telegram.initDataUnsafe.user.last_name"
           },
           {
             headers: {
@@ -79,16 +81,36 @@ function App() {
           }
         );
         setuser({
-          first_name: telegram.initDataUnsafe.user.first_name, 
-          last_name: telegram.initDataUnsafe.user.last_name,
-          photo: response.data.photo ? response.data.photo : logo
+          userid: response.data.userid,
+          first_name: response.data.first_name, 
+          last_name: response.data.last_name,
+          photo: response.data.photo ? response.data.photo : logo,
+          money: response.data.money,
+          hacklist: response.data.hacklist,
+          hacksite: response.data.hacksite
         })
       } else {
+        const response = await axios.post(
+          `${site}/`,
+          {
+            userid: telegram.initDataUnsafe.user.id,
+            platform: "vk",
+          },
+          {
+            headers: {
+              "Content-type": "application/json; charset=UTF-8",
+            },
+          }
+        );
         const user = await bridge.send("VKWebAppGetUserInfo");
         setuser({
+          userid: response.data.userid,
           first_name: user.first_name, 
           last_name: user.last_name,
-          photo: logo
+          photo: logo,
+          money: response.data.money,
+          hacklist: response.data.hacklist,
+          hacksite: response.data.hacksite
         })
       }
     }
@@ -141,42 +163,23 @@ function App() {
               <div className='stats'>
                 {//<img src="https://sun75-2.userapi.com/s/v1/if2/tITQ5bySaMd5DxzDvj_FK23vWG_rajznbafawMPVvo6AELi0oQY3j29GzheFfe7wcE9hoDeS6oA9da24OH1FPODB.jpg?quality=95&crop=63,0,1141,1141&as=50x50,100x100,200x200,400x400&ava=1&u=svMfBa0kU-GORlIDTaRG9V0N17oSXj-1PpUXnTjKLnQ&cs=200x200" alt="" />
                 }
-                <div style={{width: "40%", textAlign: "center"}}>
-                  <div style={{height: "33%", display: "flex", justifyContent: "center", alignItems: "center"}}>
-                    <span style={{fontSize: "2.5vw", whiteSpace: "nowrap"}}>Ваши успехи:</span>
-                  </div>
-                  <div style={{height: "33%", display: "flex", justifyContent: "center", alignItems: "center"}}>
-                    <span style={{fontSize: "3vw", whiteSpace: "nowrap"}}>1.000.000 hackercoin</span>
-                  </div>
-                  <div style={{height: "33%", display: "flex", justifyContent: "center", alignItems: "center"}}>
-                    <span style={{fontSize: "3vw", whiteSpace: "nowrap"}}>500 👨🏻‍💻</span>
-                  </div>
-
+                <div style={{width: "40%", display: "flex", alignItems: "center", justifyContent: "space-evenly", flexDirection: "column"}}>
+                  <span style={{fontSize: "2.5vw", whiteSpace: "nowrap"}}>Ваши успехи:</span>
+                  <span style={{fontSize: "3vw", whiteSpace: "nowrap"}}>{user?.money} HC</span>
+                  <span style={{fontSize: "3vw", whiteSpace: "nowrap"}}>{user?.hacklist.length} 👨🏻‍💻</span>
                 </div>
                 <div className='horizontallyseperator' />
-                
-                <div style={{textAlign: "center", width: "20%"}}>
-                  <img style={{borderRadius: "999px", marginBottom: "10px"}} className='divimage' src={user.photo} />
-                  <div style={{marginTop: "-30px"}}>
-                    <span style={{fontSize: "2vw"}}>{user.first_name}</span>
-                  </div>
-                  <div style={{marginTop: "-15px"}}>
-                    <span style={{fontSize: "2vw"}}>Топ 100</span>
-                </div>
-
-                </div>
+            
+                <div style={{display: "flex", alignItems: "center", justifyContent: "space-evenly", flexDirection: "column", width: "20%"}}>
+                  <img style={{borderRadius: "999px", width: "50px"}} src={user?.photo} />
+                  <span style={{fontSize: "3vw"}}>{user?.first_name}</span>
+                </div>  
                <div className='horizontallyseperator' />
                
-                <div style={{width: "40%"}}>
-                  <div style={{height: "33%", display: "flex", justifyContent: "center", alignItems: "center"}}>
-                    <span style={{fontSize: "2.5vw", whiteSpace: "nowrap"}}>Данные о вашем взломе:</span>
-                  </div>
-                  <div style={{height: "33%", display: "flex", justifyContent: "center", alignItems: "center"}}>
-                    <span style={{fontSize: "3vw", whiteSpace: "nowrap"}}>@shishkin666 🐱‍👤</span>
-                  </div>
-                  <div style={{height: "33%", display: "flex", justifyContent: "center", alignItems: "center"}}>
-                    <span style={{fontSize: "3vw", whiteSpace: "nowrap"}}>05.12.2006 📅</span>
-                  </div>
+                <div style={{width: "40%", display: "flex", alignItems: "center", justifyContent: "space-evenly", flexDirection: "column"}}>
+                  <span style={{fontSize: "2.5vw", whiteSpace: "nowrap"}}>Данные о вашем взломе:</span>
+                  <span style={{fontSize: "3vw", whiteSpace: "nowrap"}}>@shishkin666 🐱‍👤</span>
+                  <span style={{fontSize: "3vw", whiteSpace: "nowrap"}}>05.12.2006 📅</span>
                 </div>
                 {/*<div>
                   <div className='statsusername'>
@@ -196,7 +199,7 @@ function App() {
                 <Cell 
                 icon="https://sun75-2.userapi.com/s/v1/if2/tITQ5bySaMd5DxzDvj_FK23vWG_rajznbafawMPVvo6AELi0oQY3j29GzheFfe7wcE9hoDeS6oA9da24OH1FPODB.jpg?quality=95&crop=63,0,1141,1141&as=50x50,100x100,200x200,400x400&ava=1&u=svMfBa0kU-GORlIDTaRG9V0N17oSXj-1PpUXnTjKLnQ&cs=200x200" 
                 righttext="+100$">
-                {`${user.first_name} ${user.last_name}`}
+                {`${user?.first_name} ${user?.last_name}`}
                 </Cell>
                 <Cell disable onClick={() => console.log(123)} righttext="+100$">asd</Cell>
                 <Cell righttext="+100$" bottomtext="test">asd</Cell>
